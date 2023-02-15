@@ -1,0 +1,26 @@
+{
+  "name": "@milkdown-examples/react-commonmark",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+    "@milkdown/ctx": "7.0.0-next.1",
+    "@milkdown/core": "7.0.0-next.1",
+    "@milkdown/prose": "7.0.0-next.1",
+    "@milkdown/preset-commonmark": "7.0.0-next.1",
+    "@milkdown/react": "7.0.0-next.1",
+    "@milkdown/theme-nord": "7.0.0-next.1",
+    "@milkdown/transformer": "7.0.0-next.1",
+    "@type-config/strict": "^1.2.1",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^2.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tslib": "^2.4.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.2"
+  }
+}
