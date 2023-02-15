@@ -20,6 +20,12 @@ A simple example of using milkdown with React.
 
 A simple example of using milkdown with Vue.
 
+## Svelte Commonmark
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/svelte-commonmark)
+
+A simple example of using milkdown with Svelte.
+
 # License
 
 [MIT](/LICENSE)
