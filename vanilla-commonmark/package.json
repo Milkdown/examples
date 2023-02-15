@@ -1,0 +1,21 @@
+{
+  "name": "vanilla-commonmark",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+    "@milkdown/ctx": "7.0.0-next.1",
+    "@milkdown/core": "7.0.0-next.1",
+    "@milkdown/prose": "7.0.0-next.1",
+    "@milkdown/preset-commonmark": "7.0.0-next.1",
+    "@milkdown/theme-nord": "7.0.0-next.1",
+    "@milkdown/transformer": "7.0.0-next.1",
+    "@type-config/strict": "^1.2.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}
