@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "HOST=0.0.0.0 nuxt dev",
+    "start": "HOST=0.0.0.0 nuxt dev"
   },
   "devDependencies": {
     "nuxt": "^3.2.0"
