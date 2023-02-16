@@ -26,6 +26,12 @@ A simple example of using milkdown with Vue.
 
 A simple example of using milkdown with Svelte.
 
+## Solid Commonmark
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/solid-commonmark)
+
+A simple example of using milkdown with Solid.
+
 # License
 
 [MIT](/LICENSE)
