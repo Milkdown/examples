@@ -32,6 +32,12 @@ A simple example of using milkdown with Svelte.
 
 A simple example of using milkdown with Solid.
 
+## Next Commonmark
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/next-commonmark)
+
+A simple example of using milkdown with Next.
+
 # License
 
 [MIT](/LICENSE)
