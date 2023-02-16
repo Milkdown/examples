@@ -42,7 +42,7 @@ A simple example of using milkdown with Next.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/nuxt-commonmark)
 
-A simple example of using milkdown with Next.
+A simple example of using milkdown with Nuxt.
 
 # License
 
