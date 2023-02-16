@@ -44,6 +44,12 @@ A simple example of using milkdown with Next.
 
 A simple example of using milkdown with Nuxt.
 
+## Vanilla Iframe Syntax
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vanilla-iframe-syntax)
+
+A custom iframe syntax example of using milkdown with vanilla typescript.
+
 # License
 
 [MIT](/LICENSE)
