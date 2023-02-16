@@ -38,6 +38,12 @@ A simple example of using milkdown with Solid.
 
 A simple example of using milkdown with Next.
 
+## Nuxt Commonmark
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/nuxt-commonmark)
+
+A simple example of using milkdown with Next.
+
 # License
 
 [MIT](/LICENSE)

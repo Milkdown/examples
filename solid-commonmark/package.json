@@ -1,5 +1,4 @@
 {
-  "name": "@milkdown-examples/solid-commonmark",
   "scripts": {
     "start": "solid-start dev"
   },
