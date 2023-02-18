@@ -14,7 +14,7 @@ import { InputRule } from '@milkdown/prose/inputrules';
 const markdown =
 `# Milkdown Vanilla Iframe Syntax
 
-::iframe{src="https://milkdown.dev"}
+::iframe{src="https://saul-mirone.github.io"}
 
 This is a demo for using Milkdown with custom syntax: \`iframe\`.`
 

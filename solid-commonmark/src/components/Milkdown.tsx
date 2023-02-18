@@ -4,6 +4,8 @@ import { commonmark } from '@milkdown/preset-commonmark';
 import { nord } from '@milkdown/theme-nord';
 import '@milkdown/theme-nord/style.css'
 
+import './style.css'
+
 const markdown =
 `# Milkdown Solid Commonmark
 
