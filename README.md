@@ -54,7 +54,13 @@ A custom iframe syntax example of using milkdown with vanilla typescript.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/react-custom-component)
 
-A custom component rendered by react.
+A example for using react to render milkdown component.
+
+## Vue Custom Component
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vue-custom-component)
+
+A example for using vue to render milkdown component.
 
 # License
 

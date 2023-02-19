@@ -1,6 +1,6 @@
 # Milkdown Examples: React Custom Component
 
-A simple example for using milkdown with react and custom component.
+A example for using react to render milkdown component.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/react-custom-component)
 
