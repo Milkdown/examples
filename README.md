@@ -50,6 +50,12 @@ A simple example of using milkdown with Nuxt.
 
 A custom iframe syntax example of using milkdown with vanilla typescript.
 
+## React Custom Component
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/react-custom-component)
+
+A custom component rendered by react.
+
 # License
 
 [MIT](/LICENSE)
