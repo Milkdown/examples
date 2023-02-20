@@ -7,13 +7,13 @@
     "nuxt": "^3.2.0"
   },
   "dependencies": {
-    "@milkdown/core": "7.0.0-next.3",
-    "@milkdown/ctx": "7.0.0-next.3",
-    "@milkdown/preset-commonmark": "7.0.0-next.3",
-    "@milkdown/prose": "7.0.0-next.3",
-    "@milkdown/theme-nord": "7.0.0-next.3",
-    "@milkdown/transformer": "7.0.0-next.3",
-    "@milkdown/vue": "7.0.0-next.3",
+    "@milkdown/core": "7.0.0-next.4",
+    "@milkdown/ctx": "7.0.0-next.4",
+    "@milkdown/preset-commonmark": "7.0.0-next.4",
+    "@milkdown/prose": "7.0.0-next.4",
+    "@milkdown/theme-nord": "7.0.0-next.4",
+    "@milkdown/transformer": "7.0.0-next.4",
+    "@milkdown/vue": "7.0.0-next.4",
     "@tailwindcss/typography": "^0.5.9",
     "tailwindcss": "^3.2.7"
   }

@@ -48,6 +48,12 @@ A simple example of using milkdown with Nuxt.
 
 ## Plugin Examples
 
+### Vanilla Shiki Highlight
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vanilla-shiki-highlight)
+
+A simple example for adding shiki highlight for milkdown.
+
 ### Vanilla Iframe Syntax
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vanilla-iframe-syntax)
