@@ -1,3 +1,5 @@
+☝️ Click the menu button to navigate.
+
 # examples
 
 A list of examples for [milkdown](https://milkdown.dev)
