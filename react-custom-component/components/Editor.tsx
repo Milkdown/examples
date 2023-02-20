@@ -6,9 +6,11 @@ import { blockquoteSchema, commonmark } from '@milkdown/preset-commonmark';
 import { nord } from '@milkdown/theme-nord';
 
 import '@milkdown/theme-nord/style.css';
-import { useNodeViewFactory } from '@prosemirror-adapter/react';
-import { $view } from '@milkdown/utils';
+import { useNodeViewFactory, usePluginViewFactory } from '@prosemirror-adapter/react';
+import { $prose, $view } from '@milkdown/utils';
 import { Blockquote } from './Blockquote';
+import { Plugin } from '@milkdown/prose/state';
+import { Size } from './Size';
 
 const markdown =
 `# Milkdown React Custom Component
@@ -20,6 +22,7 @@ The quote is built by a custom react component.`
 
 export const MilkdownEditor: FC = () => {
   const nodeViewFactory = useNodeViewFactory();
+  const pluginViewFactory = usePluginViewFactory();
 
   useEditor((root) => {
     return Editor
@@ -31,6 +34,7 @@ export const MilkdownEditor: FC = () => {
       .config(nord)
       .use(commonmark)
       .use($view(blockquoteSchema.node, () => nodeViewFactory({ component: Blockquote })))
+      .use($prose(() => new Plugin({ view: pluginViewFactory({ component: Size }) })))
   }, [])
 
   return <Milkdown />

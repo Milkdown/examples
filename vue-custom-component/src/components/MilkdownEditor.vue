@@ -3,9 +3,11 @@ import { Milkdown, useEditor } from '@milkdown/vue';
 import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
 import { nord } from '@milkdown/theme-nord'
 import { blockquoteSchema, commonmark } from '@milkdown/preset-commonmark'
-import { $view } from '@milkdown/utils';
+import { $prose, $view } from '@milkdown/utils';
 import Blockquote from './Blockquote.vue';
-import { useNodeViewFactory } from '@prosemirror-adapter/vue';
+import { useNodeViewFactory, usePluginViewFactory } from '@prosemirror-adapter/vue';
+import { Plugin } from '@milkdown/prose/state'
+import Size from './Size.vue';
 
 const markdown =
 `# Milkdown Vue Custom Component
@@ -16,6 +18,7 @@ This is a demo for using Milkdown with **Vue**.
 The quote is built by a custom vue component.`
 
 const nodeViewFactory = useNodeViewFactory();
+const pluginViewFactory = usePluginViewFactory();
 
 useEditor((root) => {
   return Editor.make()
@@ -26,6 +29,7 @@ useEditor((root) => {
     })
     .use(commonmark)
     .use($view(blockquoteSchema.node, () => nodeViewFactory({ component: Blockquote })))
+    .use($prose(() => new Plugin({ view: pluginViewFactory({ component: Size }) })))
 })
 </script>
 
