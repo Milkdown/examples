@@ -3,7 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@milkdown/core': 7.0.0-next.5
   '@milkdown/ctx': 7.0.0-next.5
-  '@milkdown/plugin-tooltip': 7.0.0-next.5
+  '@milkdown/plugin-block': 7.0.0-next.5
+  '@milkdown/plugin-cursor': 7.0.0-next.5
   '@milkdown/preset-commonmark': 7.0.0-next.5
   '@milkdown/prose': 7.0.0-next.5
   '@milkdown/react': 7.0.0-next.5
@@ -26,7 +27,8 @@ specifiers:
 dependencies:
   '@milkdown/core': 7.0.0-next.5_apxtyahau4prqdlmyd7f5wiijm
   '@milkdown/ctx': 7.0.0-next.5
-  '@milkdown/plugin-tooltip': 7.0.0-next.5_hpv5qonnhivq5tn7vcbi63cyqy
+  '@milkdown/plugin-block': 7.0.0-next.5_hpv5qonnhivq5tn7vcbi63cyqy
+  '@milkdown/plugin-cursor': 7.0.0-next.5_hpv5qonnhivq5tn7vcbi63cyqy
   '@milkdown/preset-commonmark': 7.0.0-next.5_hpv5qonnhivq5tn7vcbi63cyqy
   '@milkdown/prose': 7.0.0-next.5
   '@milkdown/react': 7.0.0-next.5_5qzuaxobrstizqymyu764mrbia
@@ -404,8 +406,8 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@milkdown/plugin-tooltip/7.0.0-next.5_hpv5qonnhivq5tn7vcbi63cyqy:
-    resolution: {integrity: sha512-4/rLG8pekZmxBAbZeYR+UGp3HiRVOkdONawq9ZoCUoBFT3x+kmxK1iyLpeS4XkbEvowLNRCs2I8gsVLPvtNlMA==}
+  /@milkdown/plugin-block/7.0.0-next.5_hpv5qonnhivq5tn7vcbi63cyqy:
+    resolution: {integrity: sha512-Qef31tsLIJIoBcxYes7U4GJlNQYusVDcjd7fwAiwIKWcuKSNkFWX39CAdHd0mZC0xW7JkAuO8RfeqagnLurqgA==}
     peerDependencies:
       '@milkdown/core': ^7.0.0-next.0
       '@milkdown/ctx': ^7.0.0-next.0
@@ -419,6 +421,22 @@ packages:
       '@types/lodash.debounce': 4.0.7
       lodash.debounce: 4.0.8
       tippy.js: 6.3.7
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - '@milkdown/transformer'
+    dev: false
+
+  /@milkdown/plugin-cursor/7.0.0-next.5_hpv5qonnhivq5tn7vcbi63cyqy:
+    resolution: {integrity: sha512-hYS3Zl9Fw9q+sUprpUKtd35eq9UUEK4c2wK58VFWYBy1+TcR9q0ZQcyV9bcEzS4qO8IV5hdxPRD5hjKoJ2BKFQ==}
+    peerDependencies:
+      '@milkdown/core': ^7.0.0-next.0
+      '@milkdown/ctx': ^7.0.0-next.0
+      '@milkdown/prose': ^7.0.0-next.0
+    dependencies:
+      '@milkdown/core': 7.0.0-next.5_apxtyahau4prqdlmyd7f5wiijm
+      '@milkdown/ctx': 7.0.0-next.5
+      '@milkdown/prose': 7.0.0-next.5
+      '@milkdown/utils': 7.0.0-next.5_hpv5qonnhivq5tn7vcbi63cyqy
       tslib: 2.5.0
     transitivePeerDependencies:
       - '@milkdown/transformer'

@@ -102,6 +102,18 @@ A example for using react to render slash plugin.
 
 A example for using vue to render slash plugin.
 
+## React Block
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/react-block)
+
+A example for using react to render block plugin.
+
+## Vue Block
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vue-block)
+
+A example for using vue to render block plugin.
+
 # License
 
 [MIT](/LICENSE)
