@@ -62,6 +62,18 @@ A example for using react to render milkdown component.
 
 A example for using vue to render milkdown component.
 
+## React Tooltip
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/react-tooltip)
+
+A example for using react to render tooltip plugin.
+
+## Vue Tooltip
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vue-tooltip)
+
+A example for using vue to render tooltip plugin.
+
 # License
 
 [MIT](/LICENSE)
