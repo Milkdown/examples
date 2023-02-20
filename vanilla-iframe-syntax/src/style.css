@@ -14,3 +14,7 @@ iframe {
     width: 100%;
     height: 560px;
 }
+
+.editor {
+  @apply mx-auto;
+}
