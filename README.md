@@ -90,6 +90,18 @@ A example for using react to render tooltip plugin.
 
 A example for using vue to render tooltip plugin.
 
+## React Slash
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/react-slash)
+
+A example for using react to render slash plugin.
+
+## Vue Slash
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vue-slash)
+
+A example for using vue to render slash plugin.
+
 # License
 
 [MIT](/LICENSE)

@@ -1,0 +1,7 @@
+{
+  "extends": "@type-config/strict",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noPropertyAccessFromIndexSignature": false
+  }
+}

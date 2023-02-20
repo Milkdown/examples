@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { TooltipProvider } from "@milkdown/plugin-tooltip";
-import { toggleStrongCommand } from '@milkdown/preset-commonmark';
+import { editorViewCtx } from "@milkdown/core";
+import { SlashProvider } from "@milkdown/plugin-slash";
+import { createCodeBlockCommand } from '@milkdown/preset-commonmark';
 import { callCommand } from '@milkdown/utils';
 import { useInstance } from '@milkdown/vue';
 import { usePluginViewContext } from '@prosemirror-adapter/vue';
@@ -11,10 +12,10 @@ const [loading, get] = useInstance()
 
 const divRef = ref<VNodeRef>();
 
-let tooltipProvider: TooltipProvider;
+let tooltipProvider: SlashProvider;
 
 onMounted(() => {
-  tooltipProvider = new TooltipProvider({
+  tooltipProvider = new SlashProvider({
     content: divRef.value as any,
   })
 
@@ -32,12 +33,19 @@ onUnmounted(() => {
   tooltipProvider.destroy()
 })
 
-const toggleBold = (e: Event) => {
+const addCodeBlock = (e: Event) => {
   if (loading.value) return;
 
   e.preventDefault()
   
-  get()!.action(callCommand(toggleStrongCommand.key))
+  get()!.action((ctx) => {
+      const view = ctx.get(editorViewCtx);
+      const { dispatch, state } = view;
+      const { tr, selection } = state;
+      const { from } = selection;
+      dispatch(tr.deleteRange(from - 1, from))
+      return callCommand(createCodeBlockCommand.key)(ctx)
+  })
 }
 
 </script>
@@ -46,9 +54,9 @@ const toggleBold = (e: Event) => {
   <div ref="divRef">
     <button
       className="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
-      @mousedown="toggleBold"
+      @mousedown="addCodeBlock"
     >
-      Bold
+      Code Block
     </button>
   </div>
 </template>
