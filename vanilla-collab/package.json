@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+    "@milkdown/core": "7.0.0-next.6",
+    "@milkdown/ctx": "7.0.0-next.6",
+    "@milkdown/plugin-collab": "7.0.0-next.6",
+    "@milkdown/preset-commonmark": "7.0.0-next.6",
+    "@milkdown/prose": "7.0.0-next.6",
+    "@milkdown/theme-nord": "7.0.0-next.6",
+    "@milkdown/transformer": "7.0.0-next.6",
+    "@tailwindcss/typography": "^0.5.9",
+    "@type-config/strict": "^1.2.1",
+    "@types/node": "^18.14.0",
+    "@types/ws": "^8.5.4",
+    "tailwindcss": "^3.2.7",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "ws": "^8.12.1",
+    "y-prosemirror": "^1.2.0",
+    "y-protocols": "^1.0.5",
+    "y-websocket": "^1.4.5",
+    "yjs": "^13.5.46"
+  }
+}

@@ -66,6 +66,12 @@ A simple example for adding shiki highlight for milkdown.
 
 A custom iframe syntax example of using milkdown with vanilla typescript.
 
+## Vanilla Collab
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vanilla-collab)
+
+A example for using milkdown with yjs to build a collaborative editor.
+
 ## React Custom Component
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/react-custom-component)

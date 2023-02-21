@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Collab</title>
+  </head>
+  <body>
+    <div class="template-form">
+      <textarea
+        id="template"
+        cols="50"
+        rows="5"
+        placeholder="Input some markdown here to apply a template..."
+      ></textarea>
+      <button id="apply">apply</button>
+    </div>
+    <div class="room">
+      <button id="toggle">switch room</button>
+      <span>room: <span id="room"></span></span>
+    </div>
+    <div class="button-group">
+      <button id="connect">connect</button>
+      <button id="disconnect">disconnect</button>
+      <span>status: <span id="status"></span></span>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
