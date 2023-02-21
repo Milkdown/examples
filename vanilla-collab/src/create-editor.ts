@@ -39,7 +39,7 @@ const template$ = document.getElementById('template');
 const room$ = document.getElementById('room');
 const toggle$ = document.getElementById('toggle');
 
-export const PORT = import.meta.hot ? '5173' : location.port;
+export const PORT = location.port;
 export const HOST = [location.hostname, PORT].filter(Boolean).join(':');
 const wsUrl = `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${HOST}/__yjs__`;
 

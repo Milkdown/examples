@@ -8,7 +8,6 @@ const createWsServer = (server: ViteDevServer) => {
     const wss = new WebSocketServer({ noServer: true })
 
     server.httpServer?.on('upgrade', (request, socket, head) => {
-        console.log(request.url)
         if (!request.url) return;
 
         const url = new URL(request.url, 'http://localhost');
