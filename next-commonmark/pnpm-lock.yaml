@@ -1,13 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@milkdown/core': 7.0.0
-  '@milkdown/ctx': 7.0.0
-  '@milkdown/preset-commonmark': 7.0.0
-  '@milkdown/prose': 7.0.0
-  '@milkdown/react': 7.0.0
-  '@milkdown/theme-nord': 7.0.0
-  '@milkdown/transformer': 7.0.0
+  '@milkdown/core': 7.0.1
+  '@milkdown/ctx': 7.0.1
+  '@milkdown/preset-commonmark': 7.0.1
+  '@milkdown/prose': 7.0.1
+  '@milkdown/react': 7.0.1
+  '@milkdown/theme-nord': 7.0.1
+  '@milkdown/transformer': 7.0.1
   '@next/font': 13.1.6
   '@tailwindcss/typography': ^0.5.9
   '@types/node': 18.13.0
@@ -22,13 +22,13 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
-  '@milkdown/core': 7.0.0_k4cma33hoyb3totlovo6vuxyya
-  '@milkdown/ctx': 7.0.0
-  '@milkdown/preset-commonmark': 7.0.0_j3asfmta2ulx7x2m2z27icwsgu
-  '@milkdown/prose': 7.0.0
-  '@milkdown/react': 7.0.0_2eidfuwtp24qrdipu7uforrcki
-  '@milkdown/theme-nord': 7.0.0_zja6enjlfs5gehnwwogyfi2vr4
-  '@milkdown/transformer': 7.0.0_@milkdown+prose@7.0.0
+  '@milkdown/core': 7.0.1_f72hhfetwdzbmlp45f6wgcsavq
+  '@milkdown/ctx': 7.0.1
+  '@milkdown/preset-commonmark': 7.0.1_phjbkfgtmd2btdgaxum72rn2uq
+  '@milkdown/prose': 7.0.1
+  '@milkdown/react': 7.0.1_6lo275zrpobtyh45nhjabpevsq
+  '@milkdown/theme-nord': 7.0.1_rvkn6u7a6saov5cufa6zqkxkwm
+  '@milkdown/transformer': 7.0.1_@milkdown+prose@7.0.1
   '@next/font': 13.1.6
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@types/node': 18.13.0
@@ -88,17 +88,17 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: false
 
-  /@milkdown/core/7.0.0_k4cma33hoyb3totlovo6vuxyya:
-    resolution: {integrity: sha512-O45j9OBM9FB7muiq3c0kbX63jKeJIQrcQ+55KUsJlxLGTGNVI4+RZzPOU/J9FJgBi+E7cC1MFKZzTJmOLEYffw==}
+  /@milkdown/core/7.0.1_f72hhfetwdzbmlp45f6wgcsavq:
+    resolution: {integrity: sha512-yb/J1qxsIGheZJ5THvfeghNwCy9bqqQ4Lb3b92NcdH90ENVR6i8qqTLPNJR7dZ95cdaCXd/92qaG225joAe2Ig==}
     peerDependencies:
       '@milkdown/ctx': ^7.0.0-next.0
       '@milkdown/prose': ^7.0.0-next.0
       '@milkdown/transformer': ^7.0.0-next.0
     dependencies:
-      '@milkdown/ctx': 7.0.0
-      '@milkdown/exception': 7.0.0
-      '@milkdown/prose': 7.0.0
-      '@milkdown/transformer': 7.0.0_@milkdown+prose@7.0.0
+      '@milkdown/ctx': 7.0.1
+      '@milkdown/exception': 7.0.1
+      '@milkdown/prose': 7.0.1
+      '@milkdown/transformer': 7.0.1_@milkdown+prose@7.0.1
       remark-parse: 10.0.1
       remark-stringify: 10.0.2
       tslib: 2.5.0
@@ -107,31 +107,31 @@ packages:
       - supports-color
     dev: false
 
-  /@milkdown/ctx/7.0.0:
-    resolution: {integrity: sha512-Uzxp0DfuCzRpzkrTkW6Asif2JTG3h15IXeD72PV5NiWao0DqY0zTA4C6vWLVGuoP4WLLJwUJn/uzlE7Z2z6P5A==}
+  /@milkdown/ctx/7.0.1:
+    resolution: {integrity: sha512-136fo86lvi8/dXvWlusUkNRvf01KZ7hyhzM7zFnIOzvgpaoVyrqDn1OLyWVo32hcq1pYU5Fn3e0S5gupwsnlCA==}
     dependencies:
-      '@milkdown/exception': 7.0.0
+      '@milkdown/exception': 7.0.1
       tslib: 2.5.0
     dev: false
 
-  /@milkdown/exception/7.0.0:
-    resolution: {integrity: sha512-Bo2tmoErsJD3f20DZ4jBvePMBbGTSrBOV2EBTtxquKYPid5VXx4dhaXcotwdfHBaIy6EBykUJgpz4uCrPbpZJQ==}
+  /@milkdown/exception/7.0.1:
+    resolution: {integrity: sha512-nj9OcMyaccsytdJJOkUsK6VLH61ZatGBv3Wy1G9ub72Yi3ftbAD1gkFx1xduQ64m8EoWUbRJBiXKRjn3pyxohA==}
     dependencies:
       tslib: 2.5.0
     dev: false
 
-  /@milkdown/preset-commonmark/7.0.0_j3asfmta2ulx7x2m2z27icwsgu:
-    resolution: {integrity: sha512-WUUXCWNCfg/A94zA25mdyL+pdqGUCEYmJ4ryNJ4HglUnT39xzLJSEsbcMJXeJWjl+Rs0+/mdAWRGKmRt+Bx1pA==}
+  /@milkdown/preset-commonmark/7.0.1_phjbkfgtmd2btdgaxum72rn2uq:
+    resolution: {integrity: sha512-jtnsc7ig7OU8x4IaikPeBjCvAMASW1Wlk69M/69PF0P1YOCRHEFPvwRW8Nx6qZgBCm4Hzh89qWhZkEZUEah/7g==}
     peerDependencies:
       '@milkdown/core': ^7.0.0-next.0
       '@milkdown/ctx': ^7.0.0-next.0
       '@milkdown/prose': ^7.0.0-next.0
     dependencies:
-      '@milkdown/core': 7.0.0_k4cma33hoyb3totlovo6vuxyya
-      '@milkdown/ctx': 7.0.0
-      '@milkdown/exception': 7.0.0
-      '@milkdown/prose': 7.0.0
-      '@milkdown/utils': 7.0.0_j3asfmta2ulx7x2m2z27icwsgu
+      '@milkdown/core': 7.0.1_f72hhfetwdzbmlp45f6wgcsavq
+      '@milkdown/ctx': 7.0.1
+      '@milkdown/exception': 7.0.1
+      '@milkdown/prose': 7.0.1
+      '@milkdown/utils': 7.0.1_phjbkfgtmd2btdgaxum72rn2uq
       remark-inline-links: 6.0.1
       tslib: 2.5.0
       unist-util-visit: 4.1.2
@@ -139,10 +139,10 @@ packages:
       - '@milkdown/transformer'
     dev: false
 
-  /@milkdown/prose/7.0.0:
-    resolution: {integrity: sha512-jGrTKxjmhFhp9burIWE/kHfWa1oc6lBKflvsvqh3jdKC+0MbFs1PdFKJr0lG+dUCVDcau5gq514QjfQjdbFJxw==}
+  /@milkdown/prose/7.0.1:
+    resolution: {integrity: sha512-9yV1Zomy18Tp+5LC5nbG94zRAT85/QLRMi8GVwNaYh6jR2DwM6kS4KeqmGfJeogQXVsG4VpZ5s8w4hSu02gdoQ==}
     dependencies:
-      '@milkdown/exception': 7.0.0
+      '@milkdown/exception': 7.0.1
       prosemirror-changeset: 2.2.0
       prosemirror-commands: 1.5.0
       prosemirror-dropcursor: 1.7.0
@@ -159,17 +159,17 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@milkdown/react/7.0.0_2eidfuwtp24qrdipu7uforrcki:
-    resolution: {integrity: sha512-LjjxrGwaIsz2YZOOV61LEXV6rjsfmUJl4IrjtX2OVa4I/t0lN3ZnWMDKg9VTubVQ6UOwS/wt4e72yNvd1X+XRg==}
+  /@milkdown/react/7.0.1_6lo275zrpobtyh45nhjabpevsq:
+    resolution: {integrity: sha512-3b9r7KDzBa8Hmq13iQqOfKHyus1VpBMn5mrendJsl2aPvu2voQN5OqxtrsV9KoWWGvh77SsAeu8CTrFhDuMrbA==}
     peerDependencies:
       '@milkdown/core': ^7.0.0-next.0
       '@milkdown/prose': ^7.0.0-next.0
       react: '*'
       react-dom: '*'
     dependencies:
-      '@milkdown/core': 7.0.0_k4cma33hoyb3totlovo6vuxyya
-      '@milkdown/prose': 7.0.0
-      '@milkdown/utils': 7.0.0_j3asfmta2ulx7x2m2z27icwsgu
+      '@milkdown/core': 7.0.1_f72hhfetwdzbmlp45f6wgcsavq
+      '@milkdown/prose': 7.0.1
+      '@milkdown/utils': 7.0.1_phjbkfgtmd2btdgaxum72rn2uq
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       tslib: 2.5.0
@@ -178,27 +178,27 @@ packages:
       - '@milkdown/transformer'
     dev: false
 
-  /@milkdown/theme-nord/7.0.0_zja6enjlfs5gehnwwogyfi2vr4:
-    resolution: {integrity: sha512-cbXDktBvVzcnNQ21RaV+s6dGR89ogNKMlkDYTMuOa+0zTxcUm6JBlAaYMt+F3A1itk1tFIByeKh2tlrtcJghhA==}
+  /@milkdown/theme-nord/7.0.1_rvkn6u7a6saov5cufa6zqkxkwm:
+    resolution: {integrity: sha512-gcU/DHNCkqFP9a+vLvVYLFsdqATS6zT9qzpdcG1R6F/pRVpU3srztYNUXF2CMJ93NlrdoSWpaHQzJ6pJkQKjHg==}
     peerDependencies:
       '@milkdown/core': ^7.0.0-next.0
       '@milkdown/ctx': ^7.0.0-next.0
       '@milkdown/prose': ^7.0.0-next.0
     dependencies:
-      '@milkdown/core': 7.0.0_k4cma33hoyb3totlovo6vuxyya
-      '@milkdown/ctx': 7.0.0
-      '@milkdown/prose': 7.0.0
+      '@milkdown/core': 7.0.1_f72hhfetwdzbmlp45f6wgcsavq
+      '@milkdown/ctx': 7.0.1
+      '@milkdown/prose': 7.0.1
       clsx: 1.2.1
       tslib: 2.5.0
     dev: false
 
-  /@milkdown/transformer/7.0.0_@milkdown+prose@7.0.0:
-    resolution: {integrity: sha512-c5lDBrtsvrY/D9UX7JglaQMVV8xZ/S8bDN7ECmghN9X4fSgcK1KQPOZUiT/pl8lhe37aAV2DuFBA6XIvuKOKew==}
+  /@milkdown/transformer/7.0.1_@milkdown+prose@7.0.1:
+    resolution: {integrity: sha512-rN/gBwdKou+0quEwCc+g/miNtAi6IJUzvGcJaGF8CK7Gho9nFjNdBHnoKi2ZwRQWVruly25cp0P66CpO4G13bg==}
     peerDependencies:
       '@milkdown/prose': ^7.0.0-next.0
     dependencies:
-      '@milkdown/exception': 7.0.0
-      '@milkdown/prose': 7.0.0
+      '@milkdown/exception': 7.0.1
+      '@milkdown/prose': 7.0.1
       '@types/mdast': 3.0.10
       '@types/unist': 2.0.6
       remark: 14.0.2
@@ -210,19 +210,19 @@ packages:
       - supports-color
     dev: false
 
-  /@milkdown/utils/7.0.0_j3asfmta2ulx7x2m2z27icwsgu:
-    resolution: {integrity: sha512-tzdcP5VwQCDS8LaWirU/PZ7mIThE55sub4JGNYyaLHKR0Hooti2tiEG/A6l/BmgNNLd/VHEz3setJzHaHDpLsg==}
+  /@milkdown/utils/7.0.1_phjbkfgtmd2btdgaxum72rn2uq:
+    resolution: {integrity: sha512-Sujo4G521omTpek5PonLSWGz1JH0UcgXFA163FHQn7BCE6AiLXZVdooVNgWDN7RwcrtuBYqFZ2OEGR/5gHI3Ww==}
     peerDependencies:
       '@milkdown/core': ^7.0.0-next.0
       '@milkdown/ctx': ^7.0.0-next.0
       '@milkdown/prose': ^7.0.0-next.0
       '@milkdown/transformer': ^7.0.0-next.0
     dependencies:
-      '@milkdown/core': 7.0.0_k4cma33hoyb3totlovo6vuxyya
-      '@milkdown/ctx': 7.0.0
-      '@milkdown/exception': 7.0.0
-      '@milkdown/prose': 7.0.0
-      '@milkdown/transformer': 7.0.0_@milkdown+prose@7.0.0
+      '@milkdown/core': 7.0.1_f72hhfetwdzbmlp45f6wgcsavq
+      '@milkdown/ctx': 7.0.1
+      '@milkdown/exception': 7.0.1
+      '@milkdown/prose': 7.0.1
+      '@milkdown/transformer': 7.0.1_@milkdown+prose@7.0.1
       nanoid: 4.0.1
       tslib: 2.5.0
     dev: false

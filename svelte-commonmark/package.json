@@ -6,12 +6,12 @@
     "start": "vite"
   },
   "dependencies": {
-    "@milkdown/core": "7.0.0",
-    "@milkdown/ctx": "7.0.0",
-    "@milkdown/preset-commonmark": "7.0.0",
-    "@milkdown/prose": "7.0.0",
-    "@milkdown/theme-nord": "7.0.0",
-    "@milkdown/transformer": "7.0.0",
+    "@milkdown/core": "7.0.1",
+    "@milkdown/ctx": "7.0.1",
+    "@milkdown/preset-commonmark": "7.0.1",
+    "@milkdown/prose": "7.0.1",
+    "@milkdown/theme-nord": "7.0.1",
+    "@milkdown/transformer": "7.0.1",
     "@sveltejs/vite-plugin-svelte": "^2.0.2",
     "@tailwindcss/typography": "^0.5.9",
     "@tsconfig/svelte": "^3.0.0",

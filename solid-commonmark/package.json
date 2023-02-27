@@ -12,12 +12,12 @@
     "vite": "^3.2.5"
   },
   "dependencies": {
-    "@milkdown/core": "7.0.0",
-    "@milkdown/ctx": "7.0.0",
-    "@milkdown/preset-commonmark": "7.0.0",
-    "@milkdown/prose": "7.0.0",
-    "@milkdown/theme-nord": "7.0.0",
-    "@milkdown/transformer": "7.0.0",
+    "@milkdown/core": "7.0.1",
+    "@milkdown/ctx": "7.0.1",
+    "@milkdown/preset-commonmark": "7.0.1",
+    "@milkdown/prose": "7.0.1",
+    "@milkdown/theme-nord": "7.0.1",
+    "@milkdown/transformer": "7.0.1",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.7.0",
     "@tailwindcss/typography": "^0.5.9",
