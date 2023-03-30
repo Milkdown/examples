@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.milkdown {
+  @apply bg-slate-50 px-2 py-4 m-5 border rounded;
+}
+
+.editor {
+  @apply mx-auto;
+}
+
+.hint {
+  @apply bg-slate-100 border-slate-400 text-gray-800;
+}

@@ -72,6 +72,12 @@ A custom iframe syntax example of using milkdown with vanilla typescript.
 
 A example for using milkdown with yjs to build a collaborative editor.
 
+## Vanilla OpenAI
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vanilla-openai)
+
+A example for using openAI to build a copilot for milkdown editor.
+
 ## React Custom Component
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/react-custom-component)
