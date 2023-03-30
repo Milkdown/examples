@@ -15,7 +15,7 @@ async function fetchAIHint(prompt: string) {
   return res.hint;
 }
 
-const openAIKey = new PluginKey("MilkdownOpenAI")
+const copilotKey = new PluginKey("MilkdownCopilot")
 
 function getHint(ctx: Ctx) {
   const view = ctx.get(editorViewCtx);
@@ -29,7 +29,7 @@ function getHint(ctx: Ctx) {
   const markdown = serializer(doc);
   fetchAIHint(markdown).then((hint) => {
     const tr = view.state.tr;
-    view.dispatch(tr.setMeta(openAIKey, hint))
+    view.dispatch(tr.setMeta(copilotKey, hint))
   })
 }
 
@@ -37,24 +37,24 @@ function applyHint(ctx: Ctx) {
   const view = ctx.get(editorViewCtx);
   const { state } = view;
   const tr = state.tr;
-  const { message } = openAIKey.getState(state);
+  const { message } = copilotKey.getState(state);
   const parser = ctx.get(parserCtx);
   const slice = parser(message);
   const dom = DOMSerializer.fromSchema(state.schema).serializeFragment(slice.content);
   const domParser = DOMParser.fromSchema(state.schema)
-  view.dispatch(tr.setMeta(openAIKey, '').replaceSelection(domParser.parseSlice(dom)));
+  view.dispatch(tr.setMeta(copilotKey, '').replaceSelection(domParser.parseSlice(dom)));
 }
 
 function hideHint(ctx: Ctx) {
   const view = ctx.get(editorViewCtx);
   const { state } = view;
   const tr = state.tr;
-  view.dispatch(tr.setMeta(openAIKey, ''))
+  view.dispatch(tr.setMeta(copilotKey, ''))
 }
 
-export const openAIPlugin = $prose((ctx) => {
+export const copilotPlugin = $prose((ctx) => {
   return new Plugin({
-    key: openAIKey,
+    key: copilotKey,
     props: {
       handleKeyDown(_view, event) {
         if (event.key === "Tab") {
@@ -70,7 +70,7 @@ export const openAIPlugin = $prose((ctx) => {
         hideHint(ctx);
       },
       decorations(state) {
-        return openAIKey.getState(state).deco;
+        return copilotKey.getState(state).deco;
       }
     },
     state: {
@@ -81,7 +81,7 @@ export const openAIPlugin = $prose((ctx) => {
         };
       },
       apply(tr, value, _prevState, state) {
-        const message = tr.getMeta(openAIKey);
+        const message = tr.getMeta(copilotKey);
         if (typeof message !== 'string') return value;
         if (message.length === 0) {
           return {

@@ -1,7 +1,7 @@
 import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
 import { commonmark } from '@milkdown/preset-commonmark';
 import { nord } from '@milkdown/theme-nord';
-import { openAIPlugin } from "./openAIPlugin";
+import { copilotPlugin } from "./copilotPlugin";
 
 const markdown = `
 # Milkdown Vanilla OpenAI
@@ -20,7 +20,7 @@ export const createEditor = async (root: string) => {
     })
     .config(nord)
     .use(commonmark)
-    .use(openAIPlugin)
+    .use(copilotPlugin)
     .create();
 
   return editor;
