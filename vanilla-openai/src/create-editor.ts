@@ -12,7 +12,7 @@ const markdown = `
 
 ## Hotel California
 
-On a dark desert **highway**. Cool wind in my hair.
+On a dark desert **highway**, cool wind in my hair.
 `;
 
 async function fetchAIHint(prompt: string) {
