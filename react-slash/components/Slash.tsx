@@ -11,7 +11,7 @@ export const slash = slashFactory('Commands');
 
 export const SlashView = () => {
     const ref = useRef<HTMLDivElement>(null)
-    const tooltipProvider = useRef<SlashProvider>()
+    const slashProvider = useRef<SlashProvider>()
 
     const { view, prevState } = usePluginViewContext()
     const [loading, get] = useInstance()
@@ -25,37 +25,44 @@ export const SlashView = () => {
         if (loading || !div) {
             return;
         }
-        tooltipProvider.current = new SlashProvider({
+        slashProvider.current = new SlashProvider({
             content: div,
+            tippyOptions: {
+                onMount: (_) => {
+                    (ref.current?.children[0] as HTMLButtonElement).focus();
+                }
+            }
         })
 
         return () => {
-            tooltipProvider.current?.destroy()
+            slashProvider.current?.destroy()
         }
     }, [loading])
 
     useEffect(() => {
-        tooltipProvider.current?.update(view, prevState)
+        slashProvider.current?.update(view, prevState)
     })
 
+    const command = (e: React.KeyboardEvent | React.MouseEvent) => {
+        e.preventDefault() // Prevent the keyboad key to be inserted in the editor.
+        action((ctx) => {
+            const view = ctx.get(editorViewCtx);
+            const { dispatch, state } = view;
+            const { tr, selection } = state;
+            const { from } = selection;
+            dispatch(tr.deleteRange(from - 1, from))
+            view.focus()
+            return callCommand(createCodeBlockCommand.key)(ctx)
+        })
+    }
+
     return (
-        <div data-desc="This additional wrapper is useful for keeping tooltip component during HMR">
-            <div ref={ref}>
+        <div data-desc="This additional wrapper is useful for keeping slash component during HMR" aria-expanded="false">
+            <div ref={ref} aria-expanded="false">
                 <button
                     className="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
-                    onMouseDown={(e) => {
-                        // Use `onMouseDown` with `preventDefault` to prevent the editor from losing focus.
-                        e.preventDefault()
-
-                        action((ctx) => {
-                            const view = ctx.get(editorViewCtx);
-                            const { dispatch, state } = view;
-                            const { tr, selection } = state;
-                            const { from } = selection;
-                            dispatch(tr.deleteRange(from - 1, from))
-                            return callCommand(createCodeBlockCommand.key)(ctx)
-                        })
-                    }}
+                    onKeyDown={(e) => command(e)}
+                    onMouseDown={(e) => { command(e)}}
                 >
                     Code Block
                 </button>
