@@ -126,6 +126,14 @@ A example for using react to render block plugin.
 
 A example for using vue to render block plugin.
 
+# Components
+
+## Link Tooltip
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/component-link-tooltip)
+
+A example for using link tooltip component in milkdown.
+
 # License
 
 [MIT](/LICENSE)
