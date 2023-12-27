@@ -11,16 +11,16 @@
 }
 
 .insert-link-button {
-  @apply w-12 h-12 mx-5 mt-2 p-2 bg-amber-100 rounded-full hover:bg-amber-200;
+  @apply w-12 h-12 mx-5 mt-2 p-2 bg-blue-100 rounded-full hover:bg-blue-400;
 }
 
 milkdown-link-preview {
   & > .link-preview {
+    @apply bg-blue-50;
     height: 42px;
     display: flex;
     justify-content: center;
     padding: 8px;
-    background: bisque;
     gap: 8px;
     border-radius: 16px;
     cursor: pointer;
@@ -70,7 +70,7 @@ milkdown-link-preview {
       padding: 5px;
       border-radius: 99px;
       &:hover {
-        background: burlywood;
+        @apply bg-blue-400;
       }
     }
   }
@@ -78,11 +78,11 @@ milkdown-link-preview {
 
 milkdown-link-edit {
   & > .link-edit {
+    @apply bg-blue-50;
     height: 42px;
     display: flex;
     justify-content: center;
     padding: 8px 12px;
-    background: bisque;
     gap: 8px;
     border-radius: 16px;
 
@@ -99,7 +99,7 @@ milkdown-link-edit {
       font-size: 12px;
       padding: 4px;
       &:hover {
-        background: burlywood;
+        @apply bg-blue-400;
       }
       &.hidden {
         visibility: hidden;
