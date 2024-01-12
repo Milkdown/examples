@@ -1,0 +1,6 @@
+{
+  "extends": "@type-config/strict",
+  "compilerOptions": {
+    "noPropertyAccessFromIndexSignature": false
+  }
+}
