@@ -41,7 +41,7 @@ useEditor((root) => {
         component: Size
       })
     })))
-    .use($prose(() => {
+    .use($prose((ctx) => {
       const getAnchorWidget = widgetViewFactory({
         as: 'span',
         component: HeadingAnchor
@@ -52,7 +52,7 @@ useEditor((root) => {
             const widgets: Decoration[] = []
 
             state.doc.descendants((node, pos) => {
-              if (node.type === headingSchema.type()) {
+              if (node.type === headingSchema.type(ctx)) {
                 widgets.push(getAnchorWidget(pos + 1, {
                   id: node.attrs.id,
                   level: node.attrs.level,
