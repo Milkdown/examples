@@ -18,7 +18,7 @@ const markdown =
 
 This is a demo for using Milkdown with custom syntax: \`iframe\`.`
 
-const remarkDirective = $remark(() => directive)
+const remarkDirective = $remark('remarkDirective', () => directive)
 const directiveNode = $node('iframe', () => ({
   group: 'block',
   atom: true,
@@ -51,11 +51,11 @@ const directiveNode = $node('iframe', () => ({
   }
 }))
 
-const inputRule = $inputRule(() => new InputRule(/::iframe\{src\="(?<src>[^"]+)?"?\}/, (state, match, start, end) => {
+const inputRule = $inputRule((ctx) => new InputRule(/::iframe\{src\="(?<src>[^"]+)?"?\}/, (state, match, start, end) => {
   const [okay, src = ''] = match;
   const { tr } = state;
   if (okay) {
-    tr.replaceWith(start - 1, end, directiveNode.type().create({ src }));
+    tr.replaceWith(start - 1, end, directiveNode.type(ctx).create({ src }));
   }
 
   return tr;
@@ -69,5 +69,5 @@ Editor
   })
   .config(nord)
   .use(commonmark)
-  .use([remarkDirective, directiveNode, inputRule])
+  .use([...remarkDirective, directiveNode, inputRule])
   .create()
