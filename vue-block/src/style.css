@@ -7,5 +7,5 @@
 }
 
 .editor {
-  @apply mx-auto;
+  @apply max-w-full px-40;
 }
