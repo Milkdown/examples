@@ -38,20 +38,18 @@ export const TooltipView = () => {
     })
 
     return (
-        <div data-desc="This additional wrapper is useful for keeping tooltip component during HMR">
-            <div ref={ref}>
-                <button
-                    className="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
-                    onMouseDown={(e) => {
-                        // Use `onMouseDown` with `preventDefault` to prevent the editor from losing focus.
-                        e.preventDefault()
+          <div className="absolute data-[show=false]:hidden" ref={ref}>
+              <button
+                  className="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
+                  onMouseDown={(e) => {
+                      // Use `onMouseDown` with `preventDefault` to prevent the editor from losing focus.
+                      e.preventDefault()
 
-                        action(callCommand(toggleStrongCommand.key))
-                    }}
-                >
-                    Bold
-                </button>
-            </div>
-        </div>
+                      action(callCommand(toggleStrongCommand.key))
+                  }}
+              >
+                  Bold
+              </button>
+          </div>
     )
 }

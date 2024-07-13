@@ -36,14 +36,14 @@ const toggleBold = (e: Event) => {
   if (loading.value) return;
 
   e.preventDefault()
-  
+
   get()!.action(callCommand(toggleStrongCommand.key))
 }
 
 </script>
 
 <template>
-  <div ref="divRef">
+  <div className="absolute data-[show=false]:hidden" ref="divRef">
     <button
       className="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
       @mousedown="toggleBold"
