@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
-import { slashFactory } from '@milkdown/plugin-slash';
-import { commonmark } from '@milkdown/preset-commonmark';
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
+import { slashFactory } from '@milkdown/kit/plugin/slash';
+import { commonmark } from '@milkdown/kit/preset/commonmark';
 import { nord } from '@milkdown/theme-nord';
 import { Milkdown, useEditor } from '@milkdown/vue';
 import { usePluginViewFactory } from '@prosemirror-adapter/vue';

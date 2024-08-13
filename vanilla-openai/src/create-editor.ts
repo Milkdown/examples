@@ -1,5 +1,5 @@
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
-import { commonmark } from '@milkdown/preset-commonmark';
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
+import { commonmark } from '@milkdown/kit/preset/commonmark';
 import { nord } from '@milkdown/theme-nord';
 import { copilotPlugin } from "./copilotPlugin";
 

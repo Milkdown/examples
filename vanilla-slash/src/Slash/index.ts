@@ -1,11 +1,9 @@
-import { slashFactory, SlashProvider } from "@milkdown/plugin-slash"
-import type { EditorView } from '@milkdown/prose/view'
-import type { EditorState } from '@milkdown/prose/state'
-import { commandsCtx, editorViewCtx } from '@milkdown/core'
-import type { Ctx } from '@milkdown/ctx'
-import {
-  createCodeBlockCommand,
-} from "@milkdown/preset-commonmark";
+import { slashFactory, SlashProvider } from "@milkdown/kit/plugin/slash"
+import type { EditorView } from '@milkdown/kit/prose/view'
+import type { EditorState } from '@milkdown/kit/prose/state'
+import { commandsCtx, editorViewCtx } from '@milkdown/kit/core'
+import type { Ctx } from '@milkdown/kit/ctx'
+import { createCodeBlockCommand } from "@milkdown/kit/preset/commonmark";
 
 export const slash = slashFactory('Command')
 
@@ -21,6 +19,7 @@ const removeSlash = (ctx: Ctx) => {
 
 export function slashPluginView(view: EditorView) {
   const content = document.createElement('div');
+  content.className = "absolute data-[show='false']:hidden";
   const commandList = [
     {
       onSelect: (ctx: Ctx) => {
@@ -40,8 +39,7 @@ export function slashPluginView(view: EditorView) {
     }
   })
 
-  let firstItem: HTMLElement
-  commandList.forEach((item, i) => {
+  commandList.forEach((item) => {
     const div = document.createElement('p')
     div.ariaExpanded = "false"
 
@@ -51,7 +49,6 @@ export function slashPluginView(view: EditorView) {
 
     div.appendChild(button)
     content.appendChild(div)
-    if(i === 0) firstItem = button
 
     button.addEventListener('mousedown', (e) => {
       e.preventDefault()
@@ -67,11 +64,6 @@ export function slashPluginView(view: EditorView) {
 
   const provider = new SlashProvider({
     content,
-    tippyOptions: {
-      onMount: () => {
-        ;(firstItem as HTMLButtonElement).focus();
-      }
-    }
   });
 
   return {

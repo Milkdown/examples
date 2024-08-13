@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Milkdown, useEditor } from '@milkdown/vue';
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
 import { nord } from '@milkdown/theme-nord'
-import { commonmark } from '@milkdown/preset-commonmark'
+import { commonmark } from '@milkdown/kit/preset/commonmark'
 
 const markdown =
 `# Milkdown Vue Commonmark

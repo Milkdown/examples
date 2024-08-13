@@ -15,40 +15,20 @@
 }
 
 milkdown-link-preview {
+  @apply shadow overflow-hidden rounded absolute;
+
+  &[data-show='false'] {
+    @apply hidden;
+  }
+
   & > .link-preview {
-    @apply bg-blue-50;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    padding: 8px;
-    gap: 8px;
-    border-radius: 16px;
-    cursor: pointer;
-
-    & > .link-display:hover:before {
-      display: block;
-    }
-
-    & > .link-display:before {
-      content: 'click to copy link';
-      position: absolute;
-      transform: translate(50%, -130%);
-      padding: 6px 10px;
-      font-size: 12px;
-      border-radius: 10px;
-      background: #000;
-      color: #fff;
-      text-align: center;
-
-      display: none;
-    }
+    @apply bg-blue-50 flex justify-center gap-2 p-2 cursor-pointer h-10;
 
     & > .link-icon {
+      @apply flex items-center justify-center;
       & > svg {
-        width: 14px;
-        height: 14px;
+        @apply w-3.5 h-3.5;
       }
-      padding: 5px;
     }
 
     & > .link-display {
@@ -63,12 +43,10 @@ milkdown-link-preview {
     }
 
     & > .button {
+      @apply flex items-center justify-center p-1 rounded-full;
       & > svg {
-        width: 14px;
-        height: 14px;
+        @apply w-3.5 h-3.5;
       }
-      padding: 5px;
-      border-radius: 99px;
       &:hover {
         @apply bg-blue-400;
       }
@@ -77,32 +55,24 @@ milkdown-link-preview {
 }
 
 milkdown-link-edit {
+  @apply shadow overflow-hidden rounded absolute;
+  &[data-show='false'] {
+    @apply hidden;
+  }
   & > .link-edit {
-    @apply bg-blue-50;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    padding: 8px 12px;
-    gap: 8px;
-    border-radius: 16px;
+    @apply bg-blue-50 h-10 flex justify-center gap-2 px-3 py-2;
 
     & > .input-area {
-      outline: none;
-      background: transparent;
-      width: 200px;
-      font-size: 14px;
+      @apply outline-none bg-transparent w-52 text-sm;
     }
 
     & > .button {
-      cursor: pointer;
-      border-radius: 8px;
-      font-size: 12px;
-      padding: 4px;
+      @apply cursor-pointer rounded text-sm p-1 flex items-center;
       &:hover {
         @apply bg-blue-400;
       }
       &.hidden {
-        visibility: hidden;
+        @apply invisible pointer-events-none;
       }
     }
   }

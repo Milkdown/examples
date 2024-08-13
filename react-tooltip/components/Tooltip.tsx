@@ -1,10 +1,10 @@
-import { Ctx } from "@milkdown/ctx"
-import { tooltipFactory, TooltipProvider } from "@milkdown/plugin-tooltip"
-import { toggleStrongCommand } from "@milkdown/preset-commonmark"
+import { Ctx } from "@milkdown/kit/ctx"
+import { tooltipFactory, TooltipProvider } from "@milkdown/kit/plugin/tooltip"
+import { toggleStrongCommand } from "@milkdown/kit/preset/commonmark"
 import { useInstance } from '@milkdown/react'
 import { usePluginViewContext } from "@prosemirror-adapter/react"
 import { useCallback, useEffect, useRef } from "react"
-import { callCommand } from "@milkdown/utils"
+import { callCommand } from "@milkdown/kit/utils"
 
 export const tooltip = tooltipFactory('Text');
 

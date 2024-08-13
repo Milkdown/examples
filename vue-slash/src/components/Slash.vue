@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { editorViewCtx } from "@milkdown/core";
-import { SlashProvider } from "@milkdown/plugin-slash";
-import { createCodeBlockCommand } from '@milkdown/preset-commonmark';
-import { callCommand } from '@milkdown/utils';
+import { editorViewCtx } from "@milkdown/kit/core";
+import { SlashProvider } from "@milkdown/kit/plugin/slash";
+import { createCodeBlockCommand } from '@milkdown/kit/preset/commonmark';
+import { callCommand } from '@milkdown/kit/utils';
 import { useInstance } from '@milkdown/vue';
 import { usePluginViewContext } from '@prosemirror-adapter/vue';
 import { onMounted, onUnmounted, ref, VNodeRef, watch } from 'vue';
@@ -37,7 +37,7 @@ const addCodeBlock = (e: Event) => {
   if (loading.value) return;
 
   e.preventDefault()
-  
+
   get()!.action((ctx) => {
       const view = ctx.get(editorViewCtx);
       const { dispatch, state } = view;
@@ -51,9 +51,9 @@ const addCodeBlock = (e: Event) => {
 </script>
 
 <template>
-  <div ref="divRef">
+  <div ref="divRef" class="absolute data-[show='false']:hidden">
     <button
-      className="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
+      class="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
       @mousedown="addCodeBlock"
     >
       Code Block

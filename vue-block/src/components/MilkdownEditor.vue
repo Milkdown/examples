@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
-import { block } from '@milkdown/plugin-block';
-import { cursor } from '@milkdown/plugin-cursor';
-import { commonmark } from '@milkdown/preset-commonmark';
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
+import { block } from '@milkdown/kit/plugin/block';
+import { cursor } from '@milkdown/kit/plugin/cursor';
+import { commonmark } from '@milkdown/kit/preset/commonmark';
 import { nord } from '@milkdown/theme-nord';
 import { Milkdown, useEditor } from '@milkdown/vue';
 import { usePluginViewFactory } from '@prosemirror-adapter/vue';

@@ -1,22 +1,26 @@
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
-import { commonmark } from '@milkdown/preset-commonmark';
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
+import { commonmark } from '@milkdown/kit/preset/commonmark';
 import { nord } from '@milkdown/theme-nord';
-
-import { $inputRule, $node, $remark } from '@milkdown/utils';
+import { $inputRule, $node, $remark } from '@milkdown/kit/utils';
+import { Node } from '@milkdown/kit/prose/model';
+import { InputRule } from '@milkdown/kit/prose/inputrules';
 import directive from 'remark-directive';
-
-import { Node } from '@milkdown/prose/model';
 
 import '@milkdown/theme-nord/style.css';
 import './style.css';
-import { InputRule } from '@milkdown/prose/inputrules';
 
 const markdown =
 `# Milkdown Vanilla Iframe Syntax
 
 ::iframe{src="https://saul-mirone.github.io"}
 
-This is a demo for using Milkdown with custom syntax: \`iframe\`.`
+This is a demo for using Milkdown with custom syntax: \`iframe\`.
+
+You can use the following syntax to insert an iframe:
+\`\`\`
+::iframe{src="https://mirone.me"}
+\`\`\`
+`
 
 const remarkDirective = $remark('remarkDirective', () => directive)
 const directiveNode = $node('iframe', () => ({

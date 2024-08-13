@@ -1,10 +1,9 @@
 import type { Handler } from 'vite-plugin-mix'
-import { Configuration, OpenAIApi } from "openai";
+import OpenAI from "openai";
 
-const configuration = new Configuration({
+const client = new OpenAI({
     apiKey: import.meta.env.VITE_OPENAPI_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
 export const handler: Handler = async (req, res, next) => {
     if (req.path === '/api' && req.method === "POST") {
@@ -20,12 +19,12 @@ export const handler: Handler = async (req, res, next) => {
         if (!prompt) {
           return res.end(JSON.stringify({ message: 'Invalid Request' }))
         }
-        const completion = await openai.createCompletion({
-          model: "text-davinci-003",
-          prompt,
+        const completion = await client.chat.completions.create({
+          model: "gpt-3.5-turbo",
+          messages: [{ role: 'user', content: prompt }],
           n: 1,
         });
-        const hint = completion.data.choices[0]!.text;
+        const hint = completion.choices[0]!.message!.content;
         return res.end(JSON.stringify({ hint }))
     }
     next()

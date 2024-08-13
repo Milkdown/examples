@@ -1,11 +1,11 @@
-import { editorViewCtx } from "@milkdown/core"
-import { Ctx } from "@milkdown/ctx"
-import { slashFactory, SlashProvider } from "@milkdown/plugin-slash"
-import { createCodeBlockCommand } from "@milkdown/preset-commonmark"
+import { editorViewCtx } from "@milkdown/kit/core"
+import { Ctx } from "@milkdown/kit/ctx"
+import { slashFactory, SlashProvider } from "@milkdown/kit/plugin/slash"
+import { createCodeBlockCommand } from "@milkdown/kit/preset/commonmark"
 import { useInstance } from '@milkdown/react'
-import { callCommand } from "@milkdown/utils"
+import { callCommand } from "@milkdown/kit/utils"
 import { usePluginViewContext } from "@prosemirror-adapter/react"
-import { useCallback, useEffect, useRef } from "react"
+import React, { useCallback, useEffect, useRef } from "react"
 
 export const slash = slashFactory('Commands');
 
@@ -27,11 +27,6 @@ export const SlashView = () => {
         }
         slashProvider.current = new SlashProvider({
             content: div,
-            tippyOptions: {
-                onMount: (_) => {
-                    (ref.current?.children[0] as HTMLButtonElement).focus();
-                }
-            }
         })
 
         return () => {
@@ -57,16 +52,14 @@ export const SlashView = () => {
     }
 
     return (
-        <div data-desc="This additional wrapper is useful for keeping slash component during HMR" aria-expanded="false">
-            <div ref={ref} aria-expanded="false">
-                <button
-                    className="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
-                    onKeyDown={(e) => command(e)}
-                    onMouseDown={(e) => { command(e)}}
-                >
-                    Code Block
-                </button>
-            </div>
+        <div ref={ref} aria-expanded="false" className="absolute data-[show='false']:hidden">
+            <button
+                className="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
+                onKeyDown={(e) => command(e)}
+                onMouseDown={(e) => { command(e)}}
+            >
+                Code Block
+            </button>
         </div>
     )
 }

@@ -1,16 +1,16 @@
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
 import type { FC } from 'react';
 
-import { commonmark } from '@milkdown/preset-commonmark';
+import { commonmark } from '@milkdown/kit/preset/commonmark';
 import { Milkdown, useEditor } from '@milkdown/react';
 import { nord } from '@milkdown/theme-nord';
 import { usePluginViewFactory } from '@prosemirror-adapter/react';
+import { block } from '@milkdown/kit/plugin/block';
+import { cursor } from '@milkdown/kit/plugin/cursor';
 
 import { BlockView } from './Block';
 
 import '@milkdown/theme-nord/style.css';
-import { block } from '@milkdown/plugin-block';
-import { cursor } from '@milkdown/plugin-cursor';
 
 const markdown =
 `# Milkdown React Block

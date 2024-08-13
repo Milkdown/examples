@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { TooltipProvider } from "@milkdown/plugin-tooltip";
-import { toggleStrongCommand } from '@milkdown/preset-commonmark';
-import { callCommand } from '@milkdown/utils';
+import { TooltipProvider } from "@milkdown/kit/plugin/tooltip";
+import { toggleStrongCommand } from '@milkdown/kit/preset/commonmark';
+import { callCommand } from '@milkdown/kit/utils';
 import { useInstance } from '@milkdown/vue';
 import { usePluginViewContext } from '@prosemirror-adapter/vue';
 import { onMounted, onUnmounted, ref, VNodeRef, watch } from 'vue';
@@ -43,9 +43,9 @@ const toggleBold = (e: Event) => {
 </script>
 
 <template>
-  <div className="absolute data-[show=false]:hidden" ref="divRef">
+  <div class="absolute data-[show=false]:hidden" ref="divRef">
     <button
-      className="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
+      class="text-gray-600 bg-slate-200 px-2 py-1 rounded-lg hover:bg-slate-300 border hover:text-gray-900"
       @mousedown="toggleBold"
     >
       Bold

@@ -1,10 +1,10 @@
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
 import {
   collab,
   CollabService,
   collabServiceCtx,
 } from '@milkdown/plugin-collab';
-import { commonmark } from '@milkdown/preset-commonmark';
+import { commonmark } from '@milkdown/kit/preset/commonmark';
 import { nord } from '@milkdown/theme-nord';
 import { WebsocketProvider } from 'y-websocket';
 import { Doc } from 'yjs';

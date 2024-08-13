@@ -1,4 +1,4 @@
-import { BlockProvider } from "@milkdown/plugin-block"
+import { BlockProvider } from "@milkdown/kit/plugin/block"
 import { useInstance } from '@milkdown/react'
 import { useEffect, useRef } from "react"
 

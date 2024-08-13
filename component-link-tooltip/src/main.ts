@@ -1,17 +1,17 @@
-import {defaultValueCtx, Editor, editorViewCtx, rootCtx} from '@milkdown/core';
-import {commonmark, linkSchema} from '@milkdown/preset-commonmark';
+import {defaultValueCtx, Editor, editorViewCtx, rootCtx} from '@milkdown/kit/core';
+import {commonmark, linkSchema} from '@milkdown/kit/preset/commonmark';
 import { nord } from '@milkdown/theme-nord';
 import {
   configureLinkTooltip,
   linkTooltipPlugin,
   linkTooltipAPI,
   linkTooltipState
-} from '@milkdown/components/link-tooltip';
+} from '@milkdown/kit/component/link-tooltip';
+import { Ctx } from "@milkdown/kit/ctx";
 
 import '@milkdown/theme-nord/style.css';
 
 import './style.css';
-import {Ctx} from "@milkdown/ctx";
 
 const markdown =
   `# Milkdown Component Link Tooltip

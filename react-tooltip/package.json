@@ -5,26 +5,20 @@
     "start": "vite"
   },
   "dependencies": {
-    "@milkdown/core": "7.4.0",
-    "@milkdown/ctx": "7.4.0",
-    "@milkdown/plugin-tooltip": "7.4.0",
-    "@milkdown/preset-commonmark": "7.4.0",
-    "@milkdown/prose": "7.4.0",
-    "@milkdown/react": "7.4.0",
-    "@milkdown/theme-nord": "7.4.0",
-    "@milkdown/transformer": "7.4.0",
-    "@milkdown/utils": "7.4.0",
+    "@milkdown/kit": "7.5.0",
+    "@milkdown/react": "7.5.0",
+    "@milkdown/theme-nord": "7.5.0",
     "@prosemirror-adapter/react": "^0.2.2",
     "@tailwindcss/typography": "^0.5.9",
     "@type-config/strict": "^1.2.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "@vitejs/plugin-react": "^2.2.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "tailwindcss": "^3.2.7",
     "tslib": "^2.4.1",
     "typescript": "^4.8.4",
-    "vite": "^3.2.2"
+    "vite": "^5.2.6"
   }
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
-import { Editor, rootCtx, defaultValueCtx } from '@milkdown/core'
-import { commonmark } from '@milkdown/preset-commonmark'
+import { Editor, rootCtx, defaultValueCtx } from '@milkdown/kit/core'
+import { commonmark } from '@milkdown/kit/preset/commonmark'
 import { nord } from '@milkdown/theme-nord'
 
 const markdown =

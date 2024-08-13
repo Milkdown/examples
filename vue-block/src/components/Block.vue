@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BlockProvider } from "@milkdown/plugin-block";
+import { BlockProvider } from "@milkdown/kit/plugin/block";
 import { useInstance } from '@milkdown/vue';
 import { onUnmounted, ref, VNodeRef, watch } from 'vue';
 

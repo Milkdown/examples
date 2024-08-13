@@ -1,17 +1,17 @@
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
 import type { FC } from 'react';
 
 import { Milkdown, useEditor } from '@milkdown/react'
-import { blockquoteSchema, commonmark, headingSchema } from '@milkdown/preset-commonmark';
+import { blockquoteSchema, commonmark, headingSchema } from '@milkdown/kit/preset/commonmark';
 import { nord } from '@milkdown/theme-nord';
 
 import '@milkdown/theme-nord/style.css';
 import { useNodeViewFactory, usePluginViewFactory, useWidgetViewFactory } from '@prosemirror-adapter/react';
-import { $prose, $view } from '@milkdown/utils';
+import { $prose, $view } from '@milkdown/kit/utils';
 import { Blockquote } from './Blockquote';
-import { Plugin } from '@milkdown/prose/state';
+import { Plugin } from '@milkdown/kit/prose/state';
 import { Size } from './Size';
-import { Decoration, DecorationSet } from '@milkdown/prose/view';
+import { Decoration, DecorationSet } from '@milkdown/kit/prose/view';
 import { HeadingAnchor } from './HeadingAnchor';
 
 const markdown =
@@ -45,7 +45,7 @@ export const MilkdownEditor: FC = () => {
         view: pluginViewFactory({ component: Size })
       })))
       // Add a custom widget view
-      .use($prose(() => {
+      .use($prose((ctx) => {
         const getAnchorWidget = widgetViewFactory({
           as: 'span',
           component: HeadingAnchor
@@ -57,7 +57,7 @@ export const MilkdownEditor: FC = () => {
               const widgets: Decoration[] = []
 
               state.doc.descendants((node, pos) => {
-                if (node.type === headingSchema.type()) {
+                if (node.type === headingSchema.type(ctx)) {
                   widgets.push(getAnchorWidget(pos + 1, {
                     id: node.attrs.id,
                     level: node.attrs.level,

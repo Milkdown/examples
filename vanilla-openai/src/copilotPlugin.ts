@@ -1,9 +1,10 @@
-import {Plugin, PluginKey} from "@milkdown/prose/state";
-import {Ctx} from "@milkdown/ctx";
-import {editorViewCtx, parserCtx, serializerCtx} from "@milkdown/core";
-import {$prose} from "@milkdown/utils";
-import {DOMParser, DOMSerializer} from "@milkdown/prose/model";
-import {Decoration, DecorationSet} from "@milkdown/prose/view";
+import {Plugin, PluginKey} from "@milkdown/kit/prose/state";
+import {Ctx} from "@milkdown/kit/ctx";
+import {editorViewCtx, parserCtx, serializerCtx} from "@milkdown/kit/core";
+import {$prose} from "@milkdown/kit/utils";
+import {DOMParser, DOMSerializer} from "@milkdown/kit/prose/model";
+import {Decoration, DecorationSet} from "@milkdown/kit/prose/view";
+import { cloneTr } from "@milkdown/kit/prose";
 
 async function fetchAIHint(prompt: string) {
   const data: Record<string, string> = { prompt }
@@ -28,7 +29,7 @@ function getHint(ctx: Ctx) {
   if (!doc) return;
   const markdown = serializer(doc);
   fetchAIHint(markdown).then((hint) => {
-    const tr = view.state.tr;
+    const tr = cloneTr(view.state.tr);
     view.dispatch(tr.setMeta(copilotKey, hint))
   })
 }

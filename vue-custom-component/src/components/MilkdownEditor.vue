@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { Milkdown, useEditor } from '@milkdown/vue';
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
-import { nord } from '@milkdown/theme-nord'
-import { blockquoteSchema, commonmark, headingSchema } from '@milkdown/preset-commonmark'
-import { $prose, $view } from '@milkdown/utils';
-import Blockquote from './Blockquote.vue';
 import { useNodeViewFactory, usePluginViewFactory, useWidgetViewFactory } from '@prosemirror-adapter/vue';
-import { Plugin } from '@milkdown/prose/state'
-import Size from './Size.vue';
-import { Decoration, DecorationSet } from '@milkdown/prose/view';
+import { Milkdown, useEditor } from '@milkdown/vue';
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
+import { nord } from '@milkdown/theme-nord'
+import { blockquoteSchema, commonmark, headingSchema } from '@milkdown/kit/preset/commonmark'
+import { $prose, $view } from '@milkdown/kit/utils';
+import { Plugin } from '@milkdown/kit/prose/state'
+import { Decoration, DecorationSet } from '@milkdown/kit/prose/view';
 import HeadingAnchor from './HeadingAnchor.vue';
+import Size from './Size.vue';
+import Blockquote from './Blockquote.vue';
 
 const markdown =
 `# Milkdown Vue Custom Component
