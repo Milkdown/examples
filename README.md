@@ -170,6 +170,14 @@ A example for using list item block component in milkdown.
 
 A example for using table block component in milkdown.
 
+# Editors
+
+## Crepe
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/editor-crepe)
+
+A example for using crepe editor, which is a markdown editor based on Milkdown.
+
 # License
 
 [MIT](/LICENSE)
