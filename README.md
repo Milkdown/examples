@@ -144,6 +144,10 @@ A example for using link tooltip component in milkdown.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/component-image-block)
 
+## Image Inline
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/component-image-inline)
+
 # License
 
 [MIT](/LICENSE)
