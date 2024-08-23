@@ -85,9 +85,13 @@ const createArea = (area: HTMLElement) => {
   };
 }
 
-export const PORT = location.port;
-export const HOST = [location.hostname, PORT].filter(Boolean).join(':');
-const wsUrl = `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${HOST}/__yjs__`;
+// If in local
+// export const PORT = location.port;
+// export const HOST = [location.hostname, PORT].filter(Boolean).join(':');
+// const wsUrl = `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${HOST}/__yjs__`;
+
+// If in stackblitz
+const wsUrl = 'wss://demos.yjs.dev/ws';
 
 class CollabManager {
   private room = 'milkdown';
