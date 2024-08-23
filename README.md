@@ -144,13 +144,25 @@ A example for using link tooltip component in milkdown.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/component-image-block)
 
+A example for using image block component in milkdown.
+
 ## Image Inline
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/component-image-inline)
 
+A example for using image inline component in milkdown.
+
 ## Code Block
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/component-code-block)
+
+A example for using code block component in milkdown.
+
+## List Item Block
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/component-list-item)
+
+A example for using list item block component in milkdown.
 
 # License
 
