@@ -7,25 +7,16 @@
     <title>Vanilla Collab</title>
   </head>
   <body>
-    <div class="template-form">
-      <textarea
-        id="template"
-        cols="50"
-        rows="5"
-        placeholder="Input some markdown here to apply a template..."
-      ></textarea>
-      <button id="apply">apply</button>
+    <div class="flex flex-col md:flex-row divide-y-2">
+      <div class="flex-1">
+        <div id="container1"></div>
+        <div id="app1"></div>
+      </div>
+      <div class="flex-1">
+        <div id="container2"></div>
+        <div id="app2"></div>
+      </div>
     </div>
-    <div class="room">
-      <button id="toggle">switch room</button>
-      <span>room: <span id="room"></span></span>
-    </div>
-    <div class="button-group">
-      <button id="connect">connect</button>
-      <button id="disconnect">disconnect</button>
-      <span>status: <span id="status"></span></span>
-    </div>
-    <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

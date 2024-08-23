@@ -27,17 +27,63 @@ const options = name.map((x) => ({
   name: x,
 }));
 
-const rndInt = Math.floor(Math.random() * 4);
+const createArea = (area: HTMLElement) => {
+  const templateForm = document.createElement('div');
+  templateForm.classList.add('template-form');
 
-const status$ = document.getElementById('status');
-const connect$ = document.getElementById('connect');
-const disconnect$ = document.getElementById('disconnect');
+  area.appendChild(templateForm);
 
-const apply$ = document.getElementById('apply');
-const template$ = document.getElementById('template');
+  const textarea = document.createElement('textarea');
+  textarea.classList.add('template');
+  textarea.cols = 50;
+  textarea.rows = 2;
+  textarea.placeholder = 'Input some markdown here to apply template';
+  templateForm.appendChild(textarea);
+  const applyButton = document.createElement('button');
+  applyButton.textContent = 'Apply';
+  templateForm.appendChild(applyButton);
 
-const room$ = document.getElementById('room');
-const toggle$ = document.getElementById('toggle');
+  const room = document.createElement('div');
+  room.classList.add('room');
+  area.appendChild(room);
+  const toggleButton = document.createElement('button');
+  toggleButton.textContent = 'Switch Room';
+  room.appendChild(toggleButton);
+
+  const roomDisplay = document.createElement('span');
+  room.appendChild(roomDisplay);
+  const roomValue = document.createElement('span');
+  roomDisplay.appendChild(document.createTextNode('Room: '));
+  roomDisplay.appendChild(roomValue);
+
+  const buttonGroup = document.createElement('div');
+  buttonGroup.classList.add('button-group');
+  area.appendChild(buttonGroup);
+
+  const connectButton = document.createElement('button');
+  connectButton.textContent = 'Connect';
+  buttonGroup.appendChild(connectButton);
+  const disconnectButton = document.createElement('button');
+  disconnectButton.textContent = 'Disconnect';
+  buttonGroup.appendChild(disconnectButton);
+  const status = document.createElement('span');
+  status.classList.add('status');
+  buttonGroup.appendChild(status);
+
+  const statusValue = document.createElement('span');
+  status.appendChild(document.createTextNode('Status: '));
+  status.appendChild(statusValue);
+
+  return {
+    applyButton,
+    textarea,
+    toggleButton,
+    connectButton,
+    disconnectButton,
+    status: statusValue,
+    room: roomValue,
+  };
+}
 
 export const PORT = location.port;
 export const HOST = [location.hostname, PORT].filter(Boolean).join(':');
@@ -47,11 +93,14 @@ class CollabManager {
   private room = 'milkdown';
   private doc!: Doc;
   private wsProvider!: WebsocketProvider;
+  doms = createArea(this.area);
 
-  constructor(private collabService: CollabService) {
-    if (room$) {
-      room$.textContent = this.room;
-    }
+  constructor(
+    private collabService: CollabService,
+    private area: HTMLElement,
+    private rndInt = Math.floor(Math.random() * 4)
+  ) {
+    this.doms.room.textContent = this.room;
   }
 
   flush(template: string) {
@@ -65,11 +114,9 @@ class CollabManager {
       this.doc,
       { connect: true }
     );
-    this.wsProvider.awareness.setLocalStateField('user', options[rndInt]);
+    this.wsProvider.awareness.setLocalStateField('user', options[this.rndInt]);
     this.wsProvider.on('status', (payload: { status: string }) => {
-      if (status$) {
-        status$.innerText = payload.status;
-      }
+      this.doms.status.textContent = payload.status;
     });
 
     this.collabService
@@ -101,9 +148,7 @@ class CollabManager {
 
   toggleRoom() {
     this.room = this.room === 'milkdown' ? 'milkdown-sandbox' : 'milkdown';
-    if (room$) {
-      room$.textContent = this.room;
-    }
+    this.doms.room.textContent = this.room;
 
     const template = this.room === 'milkdown' ? markdown : '# Sandbox Room';
     this.disconnect();
@@ -111,7 +156,7 @@ class CollabManager {
   }
 }
 
-export const createEditor = async (root: string) => {
+export const createEditor = async (root: string, area: string) => {
   const editor = await Editor.make()
     .config((ctx) => {
       ctx.set(rootCtx, document.querySelector(root));
@@ -124,33 +169,27 @@ export const createEditor = async (root: string) => {
 
   editor.action((ctx) => {
     const collabService = ctx.get(collabServiceCtx);
-    const collabManager = new CollabManager(collabService);
+    const collabManager = new CollabManager(
+      collabService,
+      document.querySelector(area)!
+    );
     collabManager.flush(markdown);
 
-    if (connect$) {
-      connect$.onclick = () => {
-        collabManager.connect();
-      };
+    collabManager.doms.connectButton.onclick = () => {
+      collabManager.connect();
     }
 
-    if (disconnect$) {
-      disconnect$.onclick = () => {
-        collabManager.disconnect();
-      };
+    collabManager.doms.disconnectButton.onclick = () => {
+      collabManager.disconnect();
     }
 
-    if (apply$ && template$) {
-      apply$.onclick = () => {
-        if (template$ instanceof HTMLTextAreaElement) {
-          collabManager.applyTemplate(template$.value);
-        }
-      };
+
+    collabManager.doms.applyButton.onclick = () => {
+      collabManager.applyTemplate(collabManager.doms.textarea.value);
     }
 
-    if (toggle$) {
-      toggle$.onclick = () => {
-        collabManager.toggleRoom();
-      };
+    collabManager.doms.toggleButton.onclick = () => {
+      collabManager.toggleRoom();
     }
   });
 

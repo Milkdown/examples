@@ -15,15 +15,15 @@
 }
 
 .template-form textarea {
-  @apply p-2 bg-slate-50 border rounded;
+  @apply p-2 bg-slate-50 border rounded w-full;
 }
 
 .room {
-  @apply m-5;
+  @apply m-5 flex gap-2 items-center;
 }
 
 .button-group {
-  @apply m-5;
+  @apply m-5 flex gap-2 items-center;
 }
 
 button {
