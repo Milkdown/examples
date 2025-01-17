@@ -2,6 +2,7 @@
   "scripts": {
     "start": "solid-start dev"
   },
+  "packageManager": "pnpm@9.15.4",
   "type": "module",
   "devDependencies": {
     "@types/node": "^18.11.18",
