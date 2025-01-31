@@ -8,9 +8,9 @@
     "nuxt": "^3.4.3"
   },
   "dependencies": {
-    "@milkdown/kit": "7.6.1",
-    "@milkdown/theme-nord": "7.6.1",
-    "@milkdown/vue": "7.6.1",
+    "@milkdown/kit": "7.6.2",
+    "@milkdown/theme-nord": "7.6.2",
+    "@milkdown/vue": "7.6.2",
     "@tailwindcss/typography": "^0.5.9",
     "tailwindcss": "^3.2.7"
   }

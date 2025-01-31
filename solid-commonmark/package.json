@@ -13,8 +13,8 @@
     "vite": "^5.2.6"
   },
   "dependencies": {
-    "@milkdown/kit": "7.6.1",
-    "@milkdown/theme-nord": "7.6.1",
+    "@milkdown/kit": "7.6.2",
+    "@milkdown/theme-nord": "7.6.2",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.7.0",
     "@tailwindcss/typography": "^0.5.9",
