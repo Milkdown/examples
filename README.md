@@ -20,11 +20,23 @@ A simple example of using milkdown with vanilla typescript.
 
 A simple example of using milkdown with React.
 
+## React Crepe
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/react-crepe)
+
+A simple example of using crepe with React.
+
 ## Vue Commonmark
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vue-commonmark)
 
 A simple example of using milkdown with Vue.
+
+## Vue Crepe
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vue-crepe)
+
+A simple example of using crepe with Vue.
 
 ## Svelte Commonmark
 
