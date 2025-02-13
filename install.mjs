@@ -17,7 +17,7 @@ await Promise.all(
     const path = resolve(__dirname, name);
     console.log(`[${name}]: Start install.`);
     const { stderr } = await promisify(exec)(
-      `cd ${path} && pnpm uninstall -D @tailwindcss/postcss && pnpm i @tailwindcss/postcss`
+      `cd ${path} && pnpm dedupe && pnpm install`
     );
     if (stderr) console.error(stderr);
     console.log(`[${name}]: Install complete.`);
