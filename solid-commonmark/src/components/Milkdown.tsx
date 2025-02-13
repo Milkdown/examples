@@ -1,17 +1,14 @@
-import { onCleanup, onMount } from 'solid-js';
-import { defaultValueCtx, Editor, rootCtx } from '@milkdown/kit/core';
-import { commonmark } from '@milkdown/kit/preset/commonmark';
-import { nord } from '@milkdown/theme-nord';
-import '@milkdown/theme-nord/style.css'
+import { onCleanup, onMount } from "solid-js";
+import { defaultValueCtx, Editor, rootCtx } from "@milkdown/kit/core";
+import { commonmark } from "@milkdown/kit/preset/commonmark";
+import { nord } from "@milkdown/theme-nord";
+import "@milkdown/theme-nord/style.css";
 
-import './style.css'
-
-const markdown =
-`# Milkdown Solid Commonmark
+const markdown = `# Milkdown Solid Commonmark
 
 > You're scared of a world where you're needed.
 
-This is a demo for using Milkdown with **Solid**.`
+This is a demo for using Milkdown with **Solid**.`;
 
 const Milkdown = () => {
   let ref!: HTMLDivElement;
@@ -19,8 +16,8 @@ const Milkdown = () => {
   onMount(async () => {
     editor = await Editor.make()
       .config((ctx) => {
-          ctx.set(rootCtx, ref);
-          ctx.set(defaultValueCtx, markdown);
+        ctx.set(rootCtx, ref);
+        ctx.set(defaultValueCtx, markdown);
       })
       .config(nord)
       .use(commonmark)
@@ -28,10 +25,10 @@ const Milkdown = () => {
   });
 
   onCleanup(() => {
-      editor.destroy()
+    editor.destroy();
   });
 
   return <div ref={ref} />;
 };
 
-export default Milkdown
+export default Milkdown;
