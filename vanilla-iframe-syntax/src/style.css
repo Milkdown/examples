@@ -1,9 +1,3 @@
-@import "tailwindcss";
-
-.milkdown {
-  @apply bg-slate-50 px-2 py-4 m-5 border rounded;
-}
-
 iframe {
     display: block;
     margin: 0 auto;
@@ -11,8 +5,4 @@ iframe {
     max-width: 720px;
     width: 100%;
     height: 560px;
-}
-
-.editor {
-  @apply mx-auto;
 }

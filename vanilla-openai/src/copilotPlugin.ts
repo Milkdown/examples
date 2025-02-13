@@ -1,37 +1,40 @@
-import {Plugin, PluginKey} from "@milkdown/kit/prose/state";
-import {Ctx} from "@milkdown/kit/ctx";
-import {editorViewCtx, parserCtx, serializerCtx} from "@milkdown/kit/core";
-import {$prose} from "@milkdown/kit/utils";
-import {DOMParser, DOMSerializer} from "@milkdown/kit/prose/model";
-import {Decoration, DecorationSet} from "@milkdown/kit/prose/view";
+import { Plugin, PluginKey } from "@milkdown/kit/prose/state";
+import { Ctx } from "@milkdown/kit/ctx";
+import { editorViewCtx, parserCtx, serializerCtx } from "@milkdown/kit/core";
+import { $prose } from "@milkdown/kit/utils";
+import { DOMParser, DOMSerializer } from "@milkdown/kit/prose/model";
+import { Decoration, DecorationSet } from "@milkdown/kit/prose/view";
 import { cloneTr } from "@milkdown/kit/prose";
 
 async function fetchAIHint(prompt: string) {
-  const data: Record<string, string> = { prompt }
-  const response = await fetch('/api', {
+  const data: Record<string, string> = { prompt };
+  const response = await fetch("/api", {
     method: "POST",
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   });
-  const res = await response.json() as { hint: string };
+  const res = (await response.json()) as { hint: string };
   return res.hint;
 }
 
-const copilotKey = new PluginKey("MilkdownCopilot")
+const copilotKey = new PluginKey("MilkdownCopilot");
 
 function getHint(ctx: Ctx) {
   const view = ctx.get(editorViewCtx);
   const { state } = view;
   const tr = state.tr;
   const { from } = tr.selection;
-  const slice = tr.doc.slice(0, from)
+  const slice = tr.doc.slice(0, from);
   const serializer = ctx.get(serializerCtx);
-  const doc = view.state.schema.topNodeType.createAndFill(undefined, slice.content);
+  const doc = view.state.schema.topNodeType.createAndFill(
+    undefined,
+    slice.content
+  );
   if (!doc) return;
   const markdown = serializer(doc);
   fetchAIHint(markdown).then((hint) => {
     const tr = cloneTr(view.state.tr);
-    view.dispatch(tr.setMeta(copilotKey, hint))
-  })
+    view.dispatch(tr.setMeta(copilotKey, hint));
+  });
 }
 
 function applyHint(ctx: Ctx) {
@@ -41,16 +44,20 @@ function applyHint(ctx: Ctx) {
   const { message } = copilotKey.getState(state);
   const parser = ctx.get(parserCtx);
   const slice = parser(message);
-  const dom = DOMSerializer.fromSchema(state.schema).serializeFragment(slice.content);
-  const domParser = DOMParser.fromSchema(state.schema)
-  view.dispatch(tr.setMeta(copilotKey, '').replaceSelection(domParser.parseSlice(dom)));
+  const dom = DOMSerializer.fromSchema(state.schema).serializeFragment(
+    slice.content
+  );
+  const domParser = DOMParser.fromSchema(state.schema);
+  view.dispatch(
+    tr.setMeta(copilotKey, "").replaceSelection(domParser.parseSlice(dom))
+  );
 }
 
 function hideHint(ctx: Ctx) {
   const view = ctx.get(editorViewCtx);
   const { state } = view;
   const tr = state.tr;
-  view.dispatch(tr.setMeta(copilotKey, ''))
+  view.dispatch(tr.setMeta(copilotKey, ""));
 }
 
 export const copilotPlugin = $prose((ctx) => {
@@ -63,8 +70,8 @@ export const copilotPlugin = $prose((ctx) => {
           applyHint(ctx);
           return;
         }
-        if (event.key === 'Enter' || event.code === 'Space') {
-          getHint(ctx)
+        if (event.key === "Enter" || event.code === "Space") {
+          getHint(ctx);
           return;
         }
 
@@ -72,36 +79,36 @@ export const copilotPlugin = $prose((ctx) => {
       },
       decorations(state) {
         return copilotKey.getState(state).deco;
-      }
+      },
     },
     state: {
       init() {
         return {
           deco: DecorationSet.empty,
-          message: '',
+          message: "",
         };
       },
       apply(tr, value, _prevState, state) {
         const message = tr.getMeta(copilotKey);
-        if (typeof message !== 'string') return value;
+        if (typeof message !== "string") return value;
         if (message.length === 0) {
           return {
             deco: DecorationSet.empty,
-            message: ''
+            message: "",
           };
         }
         const { to } = tr.selection;
         const widget = Decoration.widget(to + 1, () => {
-          const dom = document.createElement('pre');
-          dom.className = "hint"
+          const dom = document.createElement("pre");
+          dom.className = "bg-slate-100 border-slate-400 text-gray-800";
           dom.innerHTML = message;
           return dom;
-        })
+        });
         return {
           deco: DecorationSet.create(state.doc, [widget]),
           message,
         };
-      }
-    }
-  })
-})
+      },
+    },
+  });
+});

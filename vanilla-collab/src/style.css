@@ -1,31 +1,54 @@
-@import "tailwindcss";
-
 .milkdown {
-  @apply bg-slate-50 px-2 py-4 m-5 border rounded;
+  background-color: rgb(248, 250, 252);
+  padding: 1rem 0.5rem;
+  margin: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
 }
 
 .editor {
-  @apply mx-auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .template-form {
-  @apply flex gap-2 m-5;
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.25rem;
 }
 
 .template-form textarea {
-  @apply p-2 bg-slate-50 border rounded w-full;
+  padding: 0.5rem;
+  background-color: rgb(248, 250, 252);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  width: 100%;
 }
 
 .room {
-  @apply m-5 flex gap-2 items-center;
+  margin: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .button-group {
-  @apply m-5 flex gap-2 items-center;
+  margin: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 button {
-  @apply bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-2 px-4 rounded;
+  background-color: rgb(226, 232, 240);
+  color: rgb(30, 41, 59);
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+button:hover {
+  background-color: rgb(203, 213, 225);
 }
 
 /* this is a rough fix for the first cursor position when the first paragraph is empty */
