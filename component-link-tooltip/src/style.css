@@ -1,77 +1,118 @@
-@import "tailwindcss";
-
-.milkdown {
-  @apply bg-slate-50 px-2 py-4 m-5 border rounded;
-}
-
-.editor {
-  @apply mx-auto;
-}
-
 .insert-link-button {
-  @apply w-12 h-12 mx-5 mt-2 p-2 bg-blue-100 rounded-full hover:bg-blue-400;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.5rem 1.25rem 0;
+  padding: 0.5rem;
+  background-color: rgb(219, 234, 254);
+  border-radius: 9999px;
+}
+
+.insert-link-button:hover {
+  background-color: rgb(96, 165, 250);
 }
 
 milkdown-link-preview {
-  @apply shadow overflow-hidden rounded absolute;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  border-radius: 0.25rem;
+  position: absolute;
+}
 
-  &[data-show='false'] {
-    @apply hidden;
-  }
+milkdown-link-preview[data-show='false'] {
+  display: none;
+}
 
-  & > .link-preview {
-    @apply bg-blue-50 flex justify-center gap-2 p-2 cursor-pointer h-10;
+milkdown-link-preview > .link-preview {
+  background-color: rgb(239, 246, 255);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  height: 2.5rem;
+}
 
-    & > .link-icon {
-      @apply flex items-center justify-center;
-      & > svg {
-        @apply w-3.5 h-3.5;
-      }
-    }
+milkdown-link-preview > .link-preview > .link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    & > .link-display {
-      width: 240px;
-      line-height: 24px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-size: 14px;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+milkdown-link-preview > .link-preview > .link-icon > svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
 
-    & > .button {
-      @apply flex items-center justify-center p-1 rounded-full;
-      & > svg {
-        @apply w-3.5 h-3.5;
-      }
-      &:hover {
-        @apply bg-blue-400;
-      }
-    }
-  }
+milkdown-link-preview > .link-preview > .link-display {
+  width: 240px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
+milkdown-link-preview > .link-preview > .link-display:hover {
+  text-decoration: underline;
+}
+
+milkdown-link-preview > .link-preview > .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 9999px;
+}
+
+milkdown-link-preview > .link-preview > .button > svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+milkdown-link-preview > .link-preview > .button:hover {
+  background-color: rgb(96, 165, 250);
 }
 
 milkdown-link-edit {
-  @apply shadow overflow-hidden rounded absolute;
-  &[data-show='false'] {
-    @apply hidden;
-  }
-  & > .link-edit {
-    @apply bg-blue-50 h-10 flex justify-center gap-2 px-3 py-2;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  border-radius: 0.25rem;
+  position: absolute;
+}
 
-    & > .input-area {
-      @apply outline-none bg-transparent w-52 text-sm;
-    }
+milkdown-link-edit[data-show='false'] {
+  display: none;
+}
 
-    & > .button {
-      @apply cursor-pointer rounded text-sm p-1 flex items-center;
-      &:hover {
-        @apply bg-blue-400;
-      }
-      &.hidden {
-        @apply invisible pointer-events-none;
-      }
-    }
-  }
+milkdown-link-edit > .link-edit {
+  background-color: rgb(239, 246, 255);
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+milkdown-link-edit > .link-edit > .input-area {
+  outline: none;
+  background-color: transparent;
+  width: 13rem;
+  font-size: 0.875rem;
+}
+
+milkdown-link-edit > .link-edit > .button {
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+milkdown-link-edit > .link-edit > .button:hover {
+  background-color: rgb(96, 165, 250);
+}
+
+milkdown-link-edit > .link-edit > .button.hidden {
+  visibility: hidden;
+  pointer-events: none;
 }
