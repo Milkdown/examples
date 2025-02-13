@@ -13,6 +13,7 @@
     "@milkdown/vue": "7.6.2",
     "@tailwindcss/postcss": "^4.0.6",
     "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/vite": "^4.0.6",
     "tailwindcss": "^4.0.6"
   }
 }

@@ -20,6 +20,9 @@ dependencies:
   '@tailwindcss/typography':
     specifier: ^0.5.9
     version: 0.5.16(tailwindcss@4.0.6)
+  '@tailwindcss/vite':
+    specifier: ^4.0.6
+    version: 4.0.6(vite@5.4.11)
   '@type-config/strict':
     specifier: ^1.2.1
     version: 1.2.1
@@ -1997,6 +2000,18 @@ packages:
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
       tailwindcss: 4.0.6
+    dev: false
+
+  /@tailwindcss/vite@4.0.6(vite@5.4.11):
+    resolution: {integrity: sha512-O25vZ/URWbZ2JHdk2o8wH7jOKqEGCsYmX3GwGmYS5DjE4X3mpf93a72Rn7VRnefldNauBzr5z2hfZptmBNtTUQ==}
+    peerDependencies:
+      vite: ^5.2.0 || ^6
+    dependencies:
+      '@tailwindcss/node': 4.0.6
+      '@tailwindcss/oxide': 4.0.6
+      lightningcss: 1.29.1
+      tailwindcss: 4.0.6
+      vite: 5.4.11
     dev: false
 
   /@type-config/strict@1.2.1:
