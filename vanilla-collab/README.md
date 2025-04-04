@@ -4,6 +4,7 @@ A example for using milkdown with yjs to build a collaborative editor.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vanilla-collab)
 
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/Milkdown/examples/tree/main/vanilla-collab)
 ## Getting Started
 
 1. Clone the repo.
