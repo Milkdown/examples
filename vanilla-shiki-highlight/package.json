@@ -7,8 +7,8 @@
     "start": "vite"
   },
   "dependencies": {
-    "@milkdown/kit": "7.6.2",
-    "@milkdown/theme-nord": "7.6.2",
+    "@milkdown/kit": "7.10.4",
+    "@milkdown/theme-nord": "7.10.4",
     "@tailwindcss/postcss": "^4.0.6",
     "@tailwindcss/typography": "^0.5.9",
     "@tailwindcss/vite": "^4.0.6",

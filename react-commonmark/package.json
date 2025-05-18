@@ -6,9 +6,9 @@
   },
   "packageManager": "pnpm@8.15.6",
   "dependencies": {
-    "@milkdown/kit": "7.6.2",
-    "@milkdown/react": "7.6.2",
-    "@milkdown/theme-nord": "7.6.2",
+    "@milkdown/kit": "7.10.4",
+    "@milkdown/react": "7.10.4",
+    "@milkdown/theme-nord": "7.10.4",
     "@type-config/strict": "^1.2.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",

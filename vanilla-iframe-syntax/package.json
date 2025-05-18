@@ -7,8 +7,8 @@
     "start": "vite"
   },
   "dependencies": {
-    "@milkdown/kit": "7.6.2",
-    "@milkdown/theme-nord": "7.6.2",
+    "@milkdown/kit": "7.10.4",
+    "@milkdown/theme-nord": "7.10.4",
     "@type-config/strict": "^1.2.1",
     "remark-directive": "^3.0.0",
     "tslib": "^2.4.1",

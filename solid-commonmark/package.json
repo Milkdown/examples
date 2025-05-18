@@ -7,13 +7,13 @@
   "devDependencies": {
     "@types/node": "^18.11.18",
     "esbuild": "^0.14.54",
-    "vite-plugin-solid": "^2.11.1",
     "typescript": "^4.9.4",
-    "vite": "^6.0.0"
+    "vite": "^6.0.0",
+    "vite-plugin-solid": "^2.11.1"
   },
   "dependencies": {
-    "@milkdown/kit": "7.6.2",
-    "@milkdown/theme-nord": "7.6.2",
+    "@milkdown/kit": "7.10.4",
+    "@milkdown/theme-nord": "7.10.4",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.7.0",
     "solid-js": "^1.9.3"
