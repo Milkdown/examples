@@ -4,12 +4,12 @@
   "scripts": {
     "start": "vite"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@8.15.9",
   "dependencies": {
     "@milkdown/kit": "7.11.1",
     "@milkdown/react": "7.11.1",
     "@milkdown/theme-nord": "7.11.1",
-    "@prosemirror-adapter/react": "^0.2.2",
+    "@prosemirror-adapter/react": "^0.4.0",
     "@type-config/strict": "^1.2.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
