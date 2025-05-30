@@ -15,8 +15,8 @@ dependencies:
     specifier: 7.11.1
     version: 7.11.1
   '@prosemirror-adapter/react':
-    specifier: ^0.2.2
-    version: 0.2.6(react-dom@18.3.1)(react@18.3.1)
+    specifier: ^0.4.0
+    version: 0.4.1(react-dom@18.3.1)(react@18.3.1)
   '@type-config/strict':
     specifier: ^1.2.1
     version: 1.2.1
@@ -1287,20 +1287,25 @@ packages:
       - supports-color
     dev: false
 
-  /@prosemirror-adapter/core@0.2.6:
-    resolution: {integrity: sha512-7GXWQBR/bd6ngvek8SgtlEVC0x3KL7LKZ5cxyZl4IBAlRDbITQWsuKLChEXNan9A6+9Ry4a46crbDGTQlzooOg==}
+  /@prosemirror-adapter/core@0.4.0:
+    resolution: {integrity: sha512-feLFTIvbpQDnWspZv+rjTPmqpeJ8++VM/gDnBaDNLsAEvrwmO1IHc0oyrRBl/9x3Er3tU/WXc86TlOidsN1aEg==}
     dependencies:
       tslib: 2.8.1
     dev: false
 
-  /@prosemirror-adapter/react@0.2.6(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-JdDqAJV7FnRyIlnXPP+E0Iu80BQPvHeB+7c0ZfdcHLfVb2BLTNHk6iOoqJmBJmqqHt/KjxXXTmxRUS4EEsjVlg==}
+  /@prosemirror-adapter/react@0.4.1(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-m2OdJoAGqXYHFi2vfy0DICTdOqUP2zDYfHe1cKQMM6Ri2M4n07c8812xBUkFBasLlfYm+d82N6ebTA6+B/0qEg==}
     peerDependencies:
       react: '*'
       react-dom: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
     dependencies:
-      '@prosemirror-adapter/core': 0.2.6
-      nanoid: 4.0.2
+      '@prosemirror-adapter/core': 0.4.0
+      nanoid: 5.1.5
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       tslib: 2.8.1
@@ -2303,12 +2308,6 @@ packages:
   /nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-    dev: false
-
-  /nanoid@4.0.2:
-    resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
-    engines: {node: ^14 || ^16 || >=18}
     hasBin: true
     dev: false
 

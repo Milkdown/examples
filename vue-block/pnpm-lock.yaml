@@ -15,8 +15,8 @@ dependencies:
     specifier: 7.11.1
     version: 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@4.9.5)(vue@3.5.13)
   '@prosemirror-adapter/vue':
-    specifier: ^0.2.2
-    version: 0.2.6(vue@3.5.13)
+    specifier: ^0.4.0
+    version: 0.4.1(vue@3.5.13)
   '@type-config/strict':
     specifier: ^1.2.1
     version: 1.2.1
@@ -1097,19 +1097,22 @@ packages:
       - typescript
     dev: false
 
-  /@prosemirror-adapter/core@0.2.6:
-    resolution: {integrity: sha512-7GXWQBR/bd6ngvek8SgtlEVC0x3KL7LKZ5cxyZl4IBAlRDbITQWsuKLChEXNan9A6+9Ry4a46crbDGTQlzooOg==}
+  /@prosemirror-adapter/core@0.4.0:
+    resolution: {integrity: sha512-feLFTIvbpQDnWspZv+rjTPmqpeJ8++VM/gDnBaDNLsAEvrwmO1IHc0oyrRBl/9x3Er3tU/WXc86TlOidsN1aEg==}
     dependencies:
       tslib: 2.8.1
     dev: false
 
-  /@prosemirror-adapter/vue@0.2.6(vue@3.5.13):
-    resolution: {integrity: sha512-NYjgHfjfmeS3QtMvGpL885BNdE8OnsdlNfzqO78fT2QIsKITR6hiiqsghlVBzrn41UxBILwVH3rf1gfXi7f7kg==}
+  /@prosemirror-adapter/vue@0.4.1(vue@3.5.13):
+    resolution: {integrity: sha512-zva577Bn0MLhCTYVZaUTZvOggpNMBA6n2ldmPxzYN9MJih59KYTBWmaBcZTXsGNHe9K8Wwr92WtJGG6e3Iy30w==}
     peerDependencies:
       vue: ^3.0.0
+    peerDependenciesMeta:
+      vue:
+        optional: true
     dependencies:
-      '@prosemirror-adapter/core': 0.2.6
-      nanoid: 4.0.2
+      '@prosemirror-adapter/core': 0.4.0
+      nanoid: 5.1.5
       tslib: 2.8.1
       vue: 3.5.13(typescript@4.9.5)
     dev: false
@@ -2064,12 +2067,6 @@ packages:
   /nanoid@3.3.8:
     resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-    dev: false
-
-  /nanoid@4.0.2:
-    resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
-    engines: {node: ^14 || ^16 || >=18}
     hasBin: true
     dev: false
 

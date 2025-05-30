@@ -2,11 +2,11 @@
   "scripts": {
     "start": "vite"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@8.15.9",
   "type": "module",
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "esbuild": "^0.14.54",
+    "esbuild": "^0.25.0",
     "typescript": "^4.9.4",
     "vite": "^6.0.0",
     "vite-plugin-solid": "^2.11.1"
@@ -14,8 +14,8 @@
   "dependencies": {
     "@milkdown/kit": "7.11.1",
     "@milkdown/theme-nord": "7.11.1",
-    "@solidjs/meta": "^0.28.2",
-    "@solidjs/router": "^0.7.0",
+    "@solidjs/meta": "^0.29.0",
+    "@solidjs/router": "^0.15.0",
     "solid-js": "^1.9.3"
   },
   "engines": {
