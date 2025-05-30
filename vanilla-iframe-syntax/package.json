@@ -10,7 +10,7 @@
     "@milkdown/kit": "7.11.1",
     "@milkdown/theme-nord": "7.11.1",
     "@type-config/strict": "^1.2.1",
-    "remark-directive": "^3.0.0",
+    "remark-directive": "^4.0.0",
     "tslib": "^2.4.1",
     "typescript": "^4.9.3",
     "vite": "^5.2.6"
