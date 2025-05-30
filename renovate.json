@@ -5,7 +5,7 @@
   "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
     {
-      "matchDepNames": ["!/^@milkdown/"],
+      "matchDepNames": ["/^@milkdown/"],
       "groupName": "milkdown"
     },
     {
