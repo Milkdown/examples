@@ -7,7 +7,7 @@
     "start": "vite"
   },
   "dependencies": {
-    "@milkdown/kit": "7.10.4",
+    "@milkdown/kit": "7.11.1",
     "@milkdown/plugin-collab": "7.10.4",
     "@milkdown/theme-nord": "7.10.4",
     "@tailwindcss/postcss": "^4.0.6",

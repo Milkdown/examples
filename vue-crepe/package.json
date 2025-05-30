@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@milkdown/crepe": "7.10.4",
-    "@milkdown/kit": "7.10.4",
+    "@milkdown/kit": "7.11.1",
     "@milkdown/vue": "7.10.4",
     "@type-config/strict": "^1.2.1",
     "@vitejs/plugin-vue": "^5.1.2",

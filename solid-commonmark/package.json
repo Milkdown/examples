@@ -12,7 +12,7 @@
     "vite-plugin-solid": "^2.11.1"
   },
   "dependencies": {
-    "@milkdown/kit": "7.10.4",
+    "@milkdown/kit": "7.11.1",
     "@milkdown/theme-nord": "7.10.4",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.7.0",
