@@ -15,8 +15,8 @@ dependencies:
     specifier: ^2.0.2
     version: 2.5.3(svelte@3.59.2)(vite@5.4.11)
   '@tsconfig/svelte':
-    specifier: ^3.0.0
-    version: 3.0.0
+    specifier: ^5.0.0
+    version: 5.0.4
   svelte:
     specifier: ^3.55.1
     version: 3.59.2
@@ -1020,8 +1020,8 @@ packages:
       - supports-color
     dev: false
 
-  /@tsconfig/svelte@3.0.0:
-    resolution: {integrity: sha512-pYrtLtOwku/7r1i9AMONsJMVYAtk3hzOfiGNekhtq5tYBGA7unMve8RvUclKLMT3PrihvJqUmzsRGh0RP84hKg==}
+  /@tsconfig/svelte@5.0.4:
+    resolution: {integrity: sha512-BV9NplVgLmSi4mwKzD8BD/NQ8erOY/nUE/GpgWe2ckx+wIQF5RyRirn/QsSSCPeulVpc3RA/iJt6DpfTIZps0Q==}
     dev: false
 
   /@types/debug@4.1.12:
