@@ -9,11 +9,9 @@
   "dependencies": {
     "@milkdown/crepe": "7.11.1",
     "@type-config/strict": "^1.2.1",
+    "@types/node": "^22.0.0",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
     "vite": "^5.2.6"
-  },
-  "devDependencies": {
-    "@babel/runtime": "^7.25.4"
   }
 }
