@@ -11,7 +11,7 @@
     "@milkdown/theme-nord": "7.11.1",
     "@type-config/strict": "^1.2.1",
     "tslib": "^2.4.1",
-    "typescript": "^4.9.3",
+    "typescript": "^5.0.0",
     "vite": "^5.2.6"
   }
 }
