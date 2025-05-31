@@ -7,13 +7,13 @@ settings:
 dependencies:
   '@milkdown/kit':
     specifier: 7.11.1
-    version: 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@4.9.5)
+    version: 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@5.8.3)
   '@milkdown/theme-nord':
     specifier: 7.11.1
     version: 7.11.1
   '@milkdown/vue':
     specifier: 7.11.1
-    version: 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@4.9.5)(vue@3.5.13)
+    version: 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@5.8.3)(vue@3.5.13)
   '@prosemirror-adapter/vue':
     specifier: ^0.4.0
     version: 0.4.1(vue@3.5.13)
@@ -24,17 +24,17 @@ dependencies:
     specifier: ^5.1.2
     version: 5.2.1(vite@5.4.11)(vue@3.5.13)
   typescript:
-    specifier: ^4.9.3
-    version: 4.9.5
+    specifier: ^5.0.0
+    version: 5.8.3
   vite:
     specifier: ^5.2.6
     version: 5.4.11
   vue:
     specifier: ^3.2.45
-    version: 3.5.13(typescript@4.9.5)
+    version: 3.5.13(typescript@5.8.3)
   vue-tsc:
     specifier: ^1.0.24
-    version: 1.8.27(typescript@4.9.5)
+    version: 1.8.27(typescript@5.8.3)
 
 packages:
 
@@ -728,7 +728,7 @@ packages:
     resolution: {integrity: sha512-l0h88YhZFyKdXIFNfSWpyjStDjGHwZ/U7iobcK1cQQD8sejsONdQtTVU+1wVN1PBw40PiiHB1vA5S7VTfQiP9g==}
     dev: false
 
-  /@milkdown/components@7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@4.9.5):
+  /@milkdown/components@7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@5.8.3):
     resolution: {integrity: sha512-ZtDuh7YJ1oc4hxZy4eM6ITJX4292lDIbozKZiPgw6kEFsyfYBwqDSxJZYDkdcItU466OyrrgQyYIgYAir9ELlQ==}
     peerDependencies:
       '@codemirror/language': ^6
@@ -757,7 +757,7 @@ packages:
       nanoid: 5.1.5
       tslib: 2.8.1
       unist-util-visit: 5.0.0
-      vue: 3.5.13(typescript@4.9.5)
+      vue: 3.5.13(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -778,7 +778,7 @@ packages:
       - supports-color
     dev: false
 
-  /@milkdown/crepe@7.11.1(typescript@4.9.5):
+  /@milkdown/crepe@7.11.1(typescript@5.8.3):
     resolution: {integrity: sha512-lnjNiEsbi1NDiGk7lwlD8yeQ9cNuzwJSh0OiHMxJnbO5OdG8DjNcCQtYDwer1GphemlMoG3uMm8fHryCZJKDfA==}
     dependencies:
       '@codemirror/commands': 6.8.1
@@ -787,7 +787,7 @@ packages:
       '@codemirror/state': 6.5.2
       '@codemirror/theme-one-dark': 6.1.2
       '@codemirror/view': 6.36.8
-      '@milkdown/kit': 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@4.9.5)
+      '@milkdown/kit': 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@5.8.3)
       clsx: 2.1.1
       codemirror: 6.0.1
       katex: 0.16.22
@@ -796,7 +796,7 @@ packages:
       remark-math: 6.0.0
       tslib: 2.8.1
       unist-util-visit: 5.0.0
-      vue: 3.5.13(typescript@4.9.5)
+      vue: 3.5.13(typescript@5.8.3)
     transitivePeerDependencies:
       - prosemirror-model
       - prosemirror-state
@@ -818,10 +818,10 @@ packages:
       tslib: 2.8.1
     dev: false
 
-  /@milkdown/kit@7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@4.9.5):
+  /@milkdown/kit@7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@5.8.3):
     resolution: {integrity: sha512-fdObh0J3hZYXJ5KUb3jq/CUkH+Ezc9VnOuhw07LkiPSrJcNtlnzTk1Sn0WpO3oYaK+skKaUe06pnC247Sg87nA==}
     dependencies:
-      '@milkdown/components': 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@4.9.5)
+      '@milkdown/components': 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@5.8.3)
       '@milkdown/core': 7.11.1
       '@milkdown/ctx': 7.11.1
       '@milkdown/plugin-block': 7.11.1
@@ -1077,15 +1077,15 @@ packages:
       - supports-color
     dev: false
 
-  /@milkdown/vue@7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@4.9.5)(vue@3.5.13):
+  /@milkdown/vue@7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@5.8.3)(vue@3.5.13):
     resolution: {integrity: sha512-Odj7k/nmExVQdrjD+FNfbFU7XyZ+3GtIeN7aqehEE5E3hhA+2wNu4OY774P1pUXugseQZHwE/t60w3eGiVVGeA==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
-      '@milkdown/crepe': 7.11.1(typescript@4.9.5)
-      '@milkdown/kit': 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@4.9.5)
+      '@milkdown/crepe': 7.11.1(typescript@5.8.3)
+      '@milkdown/kit': 7.11.1(@codemirror/language@6.11.0)(@codemirror/state@6.5.2)(@codemirror/view@6.36.8)(typescript@5.8.3)
       tslib: 2.8.1
-      vue: 3.5.13(typescript@4.9.5)
+      vue: 3.5.13(typescript@5.8.3)
     transitivePeerDependencies:
       - '@codemirror/language'
       - '@codemirror/state'
@@ -1114,7 +1114,7 @@ packages:
       '@prosemirror-adapter/core': 0.4.0
       nanoid: 5.1.5
       tslib: 2.8.1
-      vue: 3.5.13(typescript@4.9.5)
+      vue: 3.5.13(typescript@5.8.3)
     dev: false
 
   /@rollup/rollup-android-arm-eabi@4.30.1:
@@ -1337,7 +1337,7 @@ packages:
       vue: ^3.2.25
     dependencies:
       vite: 5.4.11
-      vue: 3.5.13(typescript@4.9.5)
+      vue: 3.5.13(typescript@5.8.3)
     dev: false
 
   /@volar/language-core@1.11.1:
@@ -1397,7 +1397,7 @@ packages:
       '@vue/shared': 3.5.13
     dev: false
 
-  /@vue/language-core@1.8.27(typescript@4.9.5):
+  /@vue/language-core@1.8.27(typescript@5.8.3):
     resolution: {integrity: sha512-L8Kc27VdQserNaCUNiSFdDl9LWT24ly8Hpwf1ECy3aFb9m6bDhBGQYOujDm21N7EW3moKIOKEanQwe1q5BK+mA==}
     peerDependencies:
       typescript: '*'
@@ -1413,7 +1413,7 @@ packages:
       minimatch: 9.0.5
       muggle-string: 0.3.1
       path-browserify: 1.0.1
-      typescript: 4.9.5
+      typescript: 5.8.3
       vue-template-compiler: 2.7.16
     dev: false
 
@@ -1446,7 +1446,7 @@ packages:
     dependencies:
       '@vue/compiler-ssr': 3.5.13
       '@vue/shared': 3.5.13
-      vue: 3.5.13(typescript@4.9.5)
+      vue: 3.5.13(typescript@5.8.3)
     dev: false
 
   /@vue/shared@3.5.13:
@@ -2337,9 +2337,9 @@ packages:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
     dev: false
 
-  /typescript@4.9.5:
-    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
-    engines: {node: '>=4.2.0'}
+  /typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+    engines: {node: '>=14.17'}
     hasBin: true
     dev: false
 
@@ -2448,19 +2448,19 @@ packages:
       he: 1.2.0
     dev: false
 
-  /vue-tsc@1.8.27(typescript@4.9.5):
+  /vue-tsc@1.8.27(typescript@5.8.3):
     resolution: {integrity: sha512-WesKCAZCRAbmmhuGl3+VrdWItEvfoFIPXOvUJkjULi+x+6G/Dy69yO3TBRJDr9eUlmsNAwVmxsNZxvHKzbkKdg==}
     hasBin: true
     peerDependencies:
       typescript: '*'
     dependencies:
       '@volar/typescript': 1.11.1
-      '@vue/language-core': 1.8.27(typescript@4.9.5)
+      '@vue/language-core': 1.8.27(typescript@5.8.3)
       semver: 7.6.3
-      typescript: 4.9.5
+      typescript: 5.8.3
     dev: false
 
-  /vue@3.5.13(typescript@4.9.5):
+  /vue@3.5.13(typescript@5.8.3):
     resolution: {integrity: sha512-wmeiSMxkZCSc+PM2w2VRsOYAZC8GdipNFRTsLSfodVqI9mbejKeXEGr8SckuLnrQPGe3oJN5c3K0vpoU9q/wCQ==}
     peerDependencies:
       typescript: '*'
@@ -2473,7 +2473,7 @@ packages:
       '@vue/runtime-dom': 3.5.13
       '@vue/server-renderer': 3.5.13(vue@3.5.13)
       '@vue/shared': 3.5.13
-      typescript: 4.9.5
+      typescript: 5.8.3
     dev: false
 
   /w3c-keyname@2.2.8:
