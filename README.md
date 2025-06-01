@@ -190,6 +190,13 @@ A example for using table block component in milkdown.
 
 A example for using crepe editor, which is a markdown editor based on Milkdown.
 
+## Crepe Builder
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/editor-crepe-builder)
+
+A example for using crepe editor builder, which is a markdown editor based on Milkdown.
+This example shows how to use crepe and only pick some features.
+
 # License
 
 [MIT](/LICENSE)
