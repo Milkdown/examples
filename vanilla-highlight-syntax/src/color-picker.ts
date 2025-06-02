@@ -48,6 +48,9 @@ class TooltipPluginView {
 
     this.provider = new TooltipProvider({
       content: this.content,
+      floatingUIOptions: {
+        placement: "right"
+      },
       shouldShow: () => {
         const view = ctx.get(editorViewCtx);
         if (!view.state) return false;
