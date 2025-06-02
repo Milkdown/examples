@@ -8,8 +8,8 @@
     "test-ast": "tsx test.ts"
   },
   "dependencies": {
-    "@milkdown/kit": "7.11.1",
-    "@milkdown/theme-nord": "7.11.1",
+    "@milkdown/kit": "7.12.1",
+    "@milkdown/theme-nord": "7.12.1",
     "@type-config/strict": "^1.2.1",
     "@types/lodash-es": "^4.17.12",
     "@types/mdast": "^4.0.4",
