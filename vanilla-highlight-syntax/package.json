@@ -21,6 +21,7 @@
     "remark-highlight-mark": "^1.4.0",
     "remark-parse": "^11.0.0",
     "remark-stringify": "^11.0.0",
+    "shiki": "^3.4.2",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
     "unified": "^11.0.5",
