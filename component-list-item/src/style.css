@@ -35,7 +35,7 @@
   all: unset !important;
 }
 
-milkdown-list-item-block {
+.milkdown-list-item-block {
   & > .list-item {
     gap: 8px;
     display: flex;
@@ -48,7 +48,7 @@ milkdown-list-item-block {
   }
 }
 
-milkdown-list-item-block .label-wrapper {
+.milkdown-list-item-block .label-wrapper {
   height: 24px;
   display: inline-flex;
   justify-content: center;
