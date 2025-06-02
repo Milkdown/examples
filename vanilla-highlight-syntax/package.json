@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@8.15.9",
+  "scripts": {
+    "start": "vite",
+    "test-ast": "tsx test.ts"
+  },
+  "dependencies": {
+    "@milkdown/kit": "7.11.1",
+    "@milkdown/theme-nord": "7.11.1",
+    "@type-config/strict": "^1.2.1",
+    "@types/mdast": "^4.0.4",
+    "mdast-util-from-markdown": "^2.0.2",
+    "mdast-util-to-markdown": "^2.1.2",
+    "micromark-extension-highlight-mark": "^1.2.0",
+    "micromark-util-types": "^2.0.2",
+    "remark-highlight-mark": "^1.4.0",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
+    "tslib": "^2.4.1",
+    "typescript": "^5.0.0",
+    "unified": "^11.0.5",
+    "unist-util-add": "^1.2.0",
+    "unist-util-visit": "^5.0.0",
+    "vite": "^5.2.6"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4"
+  }
+}
