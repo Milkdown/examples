@@ -6,9 +6,9 @@
     "start": "next dev"
   },
   "dependencies": {
-    "@milkdown/kit": "7.11.1",
-    "@milkdown/react": "7.11.1",
-    "@milkdown/theme-nord": "7.11.1",
+    "@milkdown/kit": "7.12.1",
+    "@milkdown/react": "7.12.1",
+    "@milkdown/theme-nord": "7.12.1",
     "@next/font": "14.2.15",
     "@types/node": "^22.0.0",
     "@types/react": "18.3.23",
