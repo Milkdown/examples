@@ -78,6 +78,12 @@ A simple example for adding shiki highlight for milkdown.
 
 A custom iframe syntax example of using milkdown with vanilla typescript.
 
+## Vanilla Highlight Syntax
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vanilla-highlight-syntax)
+
+A simple example for using milkdown with vanilla typescript and creating a highlight syntax.
+
 ## Vanilla Collab
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Milkdown/examples/tree/main/vanilla-collab)
