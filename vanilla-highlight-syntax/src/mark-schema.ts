@@ -1,11 +1,13 @@
 import { $markSchema } from "@milkdown/kit/utils";
 import { Mark } from "mdast";
 
+export const DEFAULT_COLOR = '#ffff00';
+
 export const markSchema = $markSchema('mark', () => {
   return {
     attrs: {
       color: {
-        default: 'yellow',
+        default: DEFAULT_COLOR,
         validate: 'string'
       }
     },
@@ -33,11 +35,11 @@ export const markSchema = $markSchema('mark', () => {
       match: (node) => node.type.name === 'mark',
       runner: (state, mark) => {
         let color = mark.attrs.color
-        if (color === 'yellow') {
+        if (color?.toLowerCase() === DEFAULT_COLOR.toLowerCase()) {
           color = undefined
         }
         state.withMark(mark, 'mark', undefined, {
-          color
+          data: { color }
         })
       }
     }

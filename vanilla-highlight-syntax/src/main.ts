@@ -10,6 +10,8 @@ import '@milkdown/theme-nord/style.css';
 import './style.css';
 import { markSchema } from './mark-schema';
 import { markInputRule } from './inputrule';
+import { colorPickerTooltip, colorPickerTooltipConfig } from './color-picker';
+import { history } from '@milkdown/kit/plugin/history';
 
 const markdown =
 `# Milkdown Vanilla Highlight Syntax
@@ -39,6 +41,9 @@ Editor
       })
   })
   .config(nord)
+  .config(colorPickerTooltipConfig)
+  .use(history)
+  .use(colorPickerTooltip)
   .use(commonmark)
   .use(milkdownMarkColorPlugin)
   .use(listener)

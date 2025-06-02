@@ -1,8 +1,13 @@
-iframe {
-    display: block;
-    margin: 0 auto;
-    box-sizing: border-box;
-    max-width: 720px;
-    width: 100%;
-    height: 560px;
+.milkdown {
+  position: relative;
+  margin-inline: 20px;
+}
+
+.milkdown-color-picker {
+  display: none;
+  position: absolute;
+}
+
+.milkdown-color-picker[data-show="true"] {
+  display: block;
 }
