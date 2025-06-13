@@ -10,7 +10,7 @@
     "@milkdown/kit": "7.12.1",
     "@milkdown/theme-nord": "7.12.1",
     "@sveltejs/vite-plugin-svelte": "^5.1.0",
-    "@tsconfig/svelte": "^3.0.0",
+    "@tsconfig/svelte": "^5.0.0",
     "svelte": "^5.0.0",
     "svelte-check": "^2.10.3",
     "tslib": "^2.5.0",
