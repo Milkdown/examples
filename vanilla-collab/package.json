@@ -23,7 +23,7 @@
     "ws": "^8.12.1",
     "y-prosemirror": "^1.2.0",
     "y-protocols": "^1.0.5",
-    "y-websocket": "^1.4.5",
+    "y-websocket": "^3.0.0",
     "yjs": "^13.5.46"
   }
 }
