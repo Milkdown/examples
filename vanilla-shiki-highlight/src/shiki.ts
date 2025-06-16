@@ -1,4 +1,4 @@
-import { getHighlighter, Highlighter } from "shiki";
+import { createHighlighter, Highlighter } from "shiki";
 import { $proseAsync } from "@milkdown/kit/utils";
 import { Node } from "@milkdown/kit/prose/model";
 import { Plugin, PluginKey } from "@milkdown/kit/prose/state";
@@ -6,6 +6,13 @@ import { Decoration, DecorationSet } from "@milkdown/kit/prose/view";
 import { findChildren } from "@milkdown/kit/prose";
 import { codeBlockSchema } from "@milkdown/kit/preset/commonmark";
 import type { Ctx } from "@milkdown/kit/ctx";
+
+function getHighlighter() {
+  return createHighlighter({
+    themes: ["github-light"],
+    langs: ["javascript", "tsx", "typescript", "markdown"],
+  });
+}
 
 function getDecorations(ctx: Ctx, doc: Node, highlighter: Highlighter) {
   const decorations: Decoration[] = [];
@@ -16,38 +23,55 @@ function getDecorations(ctx: Ctx, doc: Node, highlighter: Highlighter) {
 
   children.forEach(async (block) => {
     let from = block.pos + 1;
+    const pos = block.pos;
+    const size = block.node.nodeSize;
     const { language } = block.node.attrs;
     if (!language) return;
-    const nodes = highlighter
-      .codeToThemedTokens(block.node.textContent, language)
-      .map((token) =>
-        token.map(({ content, color }) => ({
-          content,
-          color,
-        }))
-      );
-    nodes.forEach((block) => {
-      block.forEach((node) => {
-        const to = from + node.content.length;
+    const { tokens, rootStyle } = highlighter.codeToTokens(block.node.textContent, {
+      lang: language,
+      theme: highlighter.getLoadedThemes()[0]!,
+    })
+
+
+    if (rootStyle) {
+      const decoration = Decoration.node(pos, pos + size, { style: rootStyle })
+      decorations.push(decoration)
+    }
+
+    for (const line of tokens) {
+      for (const token of line) {
+        const to = from + token.content.length
+
         const decoration = Decoration.inline(from, to, {
-          style: `color: ${node.color}`,
-        });
-        decorations.push(decoration);
-        from = to;
-      });
-      from += 1;
-    });
+          // When using `options.themes` the `htmlStyle` field will be set, otherwise `color` will be set
+          style: stringifyTokenStyle(
+            token.htmlStyle ?? `color: ${token.color}`,
+          ),
+          class: 'shiki',
+        })
+
+        decorations.push(decoration)
+
+        from = to
+      }
+
+      from += 1
+    }
   });
 
   return DecorationSet.create(doc, decorations);
 }
 
+function stringifyTokenStyle(token: string | Record<string, string>): string {
+  if (typeof token === 'string') return token
+  return Object.entries(token)
+    .map(([key, value]) => `${key}:${value}`)
+    .join(';')
+}
+
 export const milkShiki = $proseAsync(async (ctx) => {
-  const highlighter = await getHighlighter({
-    theme: "github-light",
-    langs: ["javascript", "tsx", "markdown"],
-  });
   const key = new PluginKey("shiki");
+  const highlighter = await getHighlighter();
 
   return new Plugin({
     key,

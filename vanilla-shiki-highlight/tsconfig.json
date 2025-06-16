@@ -1,6 +1,7 @@
 {
   "extends": "@type-config/strict",
   "compilerOptions": {
+    "lib": ["ESNext"],
     "noPropertyAccessFromIndexSignature": false
   }
 }
