@@ -8,8 +8,8 @@
     "nuxt": "^3.4.3"
   },
   "dependencies": {
-    "@milkdown/kit": "7.13.1",
-    "@milkdown/theme-nord": "7.13.1",
-    "@milkdown/vue": "7.13.1"
+    "@milkdown/kit": "7.14.0",
+    "@milkdown/theme-nord": "7.14.0",
+    "@milkdown/vue": "7.14.0"
   }
 }

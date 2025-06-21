@@ -7,8 +7,8 @@
     "start": "vite"
   },
   "dependencies": {
-    "@milkdown/kit": "7.13.1",
-    "@milkdown/theme-nord": "7.13.1",
+    "@milkdown/kit": "7.14.0",
+    "@milkdown/theme-nord": "7.14.0",
     "@sveltejs/vite-plugin-svelte": "^5.1.0",
     "@tsconfig/svelte": "^5.0.0",
     "svelte": "^5.0.0",
