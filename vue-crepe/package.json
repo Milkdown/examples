@@ -11,7 +11,7 @@
     "@milkdown/kit": "7.13.1",
     "@milkdown/vue": "7.13.1",
     "@type-config/strict": "^1.2.1",
-    "@vitejs/plugin-vue": "^5.1.2",
+    "@vitejs/plugin-vue": "^6.0.0",
     "typescript": "^5.0.0",
     "vite": "^6.0.0",
     "vue": "^3.2.45",
