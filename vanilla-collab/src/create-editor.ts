@@ -4,7 +4,7 @@ import {
   CollabService,
   collabServiceCtx,
 } from '@milkdown/plugin-collab';
-import { commonmark } from '@milkdown/kit/preset/commonmark';
+import { commonmark, syncHeadingIdPlugin } from '@milkdown/kit/preset/commonmark';
 import { nord } from '@milkdown/theme-nord';
 import { WebsocketProvider } from 'y-websocket';
 import { Doc } from 'yjs';
@@ -161,7 +161,7 @@ class CollabManager {
 }
 
 export const createEditor = async (root: string, area: string) => {
-  const editor = await Editor.make()
+  const editor = Editor.make()
     .config((ctx) => {
       ctx.set(rootCtx, document.querySelector(root));
       ctx.set(defaultValueCtx, markdown);
@@ -169,7 +169,13 @@ export const createEditor = async (root: string, area: string) => {
     .config(nord)
     .use(commonmark)
     .use(collab)
+
+  // To fix CJK issue
+  editor.remove(syncHeadingIdPlugin)
+
+  await editor
     .create();
+
 
   editor.action((ctx) => {
     const collabService = ctx.get(collabServiceCtx);
