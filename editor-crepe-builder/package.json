@@ -16,6 +16,6 @@
     "@uiw/codemirror-theme-nord": "^4.23.12",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
-    "vite": "^6.0.0"
+    "vite": "^7.0.0"
   }
 }
