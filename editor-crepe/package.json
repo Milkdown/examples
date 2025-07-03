@@ -7,7 +7,7 @@
     "start": "vite"
   },
   "dependencies": {
-    "@milkdown/crepe": "7.14.0",
+    "@milkdown/crepe": "7.15.1",
     "@type-config/strict": "^1.2.1",
     "@types/node": "^22.0.0",
     "tslib": "^2.4.1",
