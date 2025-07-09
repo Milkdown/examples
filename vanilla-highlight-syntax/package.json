@@ -2,7 +2,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@10.13.1",
   "scripts": {
     "start": "vite",
     "test-ast": "tsx test.ts"

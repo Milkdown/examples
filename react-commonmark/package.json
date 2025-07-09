@@ -4,7 +4,7 @@
   "scripts": {
     "start": "vite"
   },
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "@milkdown/kit": "7.14.0",
     "@milkdown/react": "7.14.0",
