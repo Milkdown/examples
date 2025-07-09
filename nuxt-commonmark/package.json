@@ -3,7 +3,7 @@
   "scripts": {
     "start": "HOST=0.0.0.0 nuxt dev"
   },
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@10.13.1",
   "devDependencies": {
     "nuxt": "^3.4.3"
   },

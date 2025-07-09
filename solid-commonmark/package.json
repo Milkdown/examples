@@ -2,7 +2,7 @@
   "scripts": {
     "start": "vite"
   },
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@10.13.1",
   "type": "module",
   "devDependencies": {
     "@types/node": "^22.0.0",
