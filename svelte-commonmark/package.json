@@ -9,7 +9,7 @@
   "dependencies": {
     "@milkdown/kit": "7.14.0",
     "@milkdown/theme-nord": "7.14.0",
-    "@sveltejs/vite-plugin-svelte": "^5.1.0",
+    "@sveltejs/vite-plugin-svelte": "^6.0.0",
     "@tsconfig/svelte": "^5.0.0",
     "svelte": "^5.0.0",
     "tslib": "^2.5.0",
