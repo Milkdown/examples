@@ -5,7 +5,7 @@
   },
   "packageManager": "pnpm@8.15.9",
   "devDependencies": {
-    "nuxt": "^3.4.3"
+    "nuxt": "^4.0.0"
   },
   "dependencies": {
     "@milkdown/kit": "7.14.0",
