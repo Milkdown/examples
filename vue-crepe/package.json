@@ -7,9 +7,9 @@
     "start": "vite"
   },
   "dependencies": {
-    "@milkdown/crepe": "7.15.3",
-    "@milkdown/kit": "7.15.3",
-    "@milkdown/vue": "7.15.3",
+    "@milkdown/crepe": "7.17.2",
+    "@milkdown/kit": "7.17.2",
+    "@milkdown/vue": "7.17.2",
     "@type-config/strict": "^1.2.1",
     "@vitejs/plugin-vue": "^6.0.0",
     "typescript": "^5.0.0",
