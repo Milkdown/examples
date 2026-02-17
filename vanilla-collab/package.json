@@ -19,7 +19,7 @@
     "tailwindcss": "^4.0.6",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
-    "vite": "^6.0.0",
+    "vite": "^7.0.0",
     "ws": "^8.12.1",
     "y-prosemirror": "^1.2.0",
     "y-protocols": "^1.0.5",
