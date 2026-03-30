@@ -24,8 +24,8 @@ dependencies:
     specifier: ^1.2.1
     version: 1.2.1
   '@types/node':
-    specifier: ^22.0.0
-    version: 22.15.31
+    specifier: ^24.0.0
+    version: 24.11.0
   openai:
     specifier: ^4.55.5
     version: 4.104.0
@@ -40,7 +40,7 @@ dependencies:
     version: 5.8.3
   vite:
     specifier: ^6.0.0
-    version: 6.3.5(@types/node@22.15.31)
+    version: 6.3.5(@types/node@24.11.0)
   vite-plugin-mix:
     specifier: ^0.4.0
     version: 0.4.0(vite@6.3.5)
@@ -1041,7 +1041,7 @@ packages:
       '@tailwindcss/node': 4.1.10
       '@tailwindcss/oxide': 4.1.10
       tailwindcss: 4.1.10
-      vite: 6.3.5(@types/node@22.15.31)
+      vite: 6.3.5(@types/node@24.11.0)
     dev: false
 
   /@type-config/strict@1.2.1:
@@ -1081,7 +1081,7 @@ packages:
   /@types/node-fetch@2.6.12:
     resolution: {integrity: sha512-8nneRWKCg3rMtF69nLQJnOYUcbafYeFSjqkw3jCRLsqkWFlHaoQrr5mXmofFGOx3DKn7UfmBMyov8ySvLRVldA==}
     dependencies:
-      '@types/node': 22.15.31
+      '@types/node': 24.11.0
       form-data: 4.0.3
     dev: false
 
@@ -1091,10 +1091,10 @@ packages:
       undici-types: 5.26.5
     dev: false
 
-  /@types/node@22.15.31:
-    resolution: {integrity: sha512-jnVe5ULKl6tijxUhvQeNbQG/84fHfg+yMak02cT8QVhBx/F05rAVxCGBYYTh2EKz22D6JF5ktXuNwdx7b9iEGw==}
+  /@types/node@24.11.0:
+    resolution: {integrity: sha512-fPxQqz4VTgPI/IQ+lj9r0h+fDR66bzoeMGHp8ASee+32OSGIkeASsoZuJixsQoVef1QJbeubcPBxKk22QVoWdw==}
     dependencies:
-      undici-types: 6.21.0
+      undici-types: 7.16.0
     dev: false
 
   /@types/trusted-types@2.0.7:
@@ -2934,8 +2934,8 @@ packages:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: false
 
-  /undici-types@6.21.0:
-    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+  /undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
     dev: false
 
   /unified@11.0.5:
@@ -3001,12 +3001,12 @@ packages:
       vite: ^3
     dependencies:
       '@vercel/nft': 0.10.1
-      vite: 6.3.5(@types/node@22.15.31)
+      vite: 6.3.5(@types/node@24.11.0)
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /vite@6.3.5(@types/node@22.15.31):
+  /vite@6.3.5(@types/node@24.11.0):
     resolution: {integrity: sha512-cZn6NDFE7wdTpINgs++ZJ4N49W2vRp8LCKrn3Ob1kYNtOo21vfDoaV5GzBfLU4MovSAB8uNRm4jgzVQZ+mBzPQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -3046,7 +3046,7 @@ packages:
       yaml:
         optional: true
     dependencies:
-      '@types/node': 22.15.31
+      '@types/node': 24.11.0
       esbuild: 0.25.5
       fdir: 6.4.6(picomatch@4.0.2)
       picomatch: 4.0.2
